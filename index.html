@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Jo'rabek Abdullayev — Frontend Developer</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav id="navbar">
+      <a class="nav-logo" href="#home">
+        <span class="bracket">&lt;</span>JA<span class="bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="burger" id="burger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#home" onclick="closeMenu()">Home</a>
+      <a href="#about" onclick="closeMenu()">About</a>
+      <a href="#skills" onclick="closeMenu()">Skills</a>
+      <a href="#projects" onclick="closeMenu()">Projects</a>
+      <a href="#contact" onclick="closeMenu()">Contact</a>
+    </div>
+
+    <!-- HERO -->
+    <section id="home">
+      <div class="hero-left reveal">
+        <p class="hero-greeting">// Salom, dunyo! 👋</p>
+        <h1 class="hero-name">Jo'rabek<br />Abdullayev</h1>
+        <p class="hero-role"><strong>Frontend Developer</strong></p>
+        <p class="hero-desc">
+          Men veb-interfeyslar yasashga ixtisoslashgan frontendchiman. Toza kod,
+          chiroyli dizayn va foydalanuvchiga qulay saytlar yarataman.
+        </p>
+        <div class="hero-btns">
+          <a href="#projects" class="btn btn-primary">Loyihalarimni ko'rish</a>
+          <a href="cv.pdf" class="btn btn-secondary" download
+            >CV yuklab olish</a
+          >
+        </div>
+      </div>
+
+      <div class="hero-right reveal">
+        <div class="code-window">
+          <div class="code-header">
+            <div class="dot dot-r"></div>
+            <div class="dot dot-y"></div>
+            <div class="dot dot-g"></div>
+            <span class="code-filename">jorabek.js</span>
+          </div>
+          <div class="code-body">
+            <span class="cl"
+              ><span class="kw">const</span> <span class="fn">developer</span>
+              <span class="op">=</span> {</span
+            >
+            <span class="cl"> name: <span class="str">"Jo'rabek"</span>,</span>
+            <span class="cl">
+              role: <span class="str">"Frontend Dev"</span>,</span
+            >
+            <span class="cl">
+              location: <span class="str">"Xorazm, UZ"</span>,</span
+            >
+            <span class="cl"> skills: [</span>
+            <span class="cl">
+              <span class="str">"HTML"</span>,
+              <span class="str">"CSS"</span>,</span
+            >
+            <span class="cl"> <span class="str">"JavaScript"</span>,</span>
+            <span class="cl"> <span class="str">"Git"</span></span>
+            <span class="cl"> ],</span>
+            <span class="cl"> learning: <span class="str">"React"</span>,</span>
+            <span class="cl"> available: <span class="kw">true</span></span>
+            <span class="cl">};</span>
+            <span class="cl"></span>
+            <span class="cl cm">// Open to work! 🚀</span>
+            <span class="cl"
+              ><span class="fn">console</span>.<span class="fn">log</span>(<span
+                class="str"
+                >"Salom!"</span
+              >)<span class="cursor"></span
+            ></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <div id="about" style="background: var(--bg2); padding: 100px 0">
+      <div
+        class="inner"
+        style="max-width: 1200px; margin: 0 auto; padding: 0 80px"
+      >
+        <div
+          style="
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 80px;
+            align-items: center;
+          "
+        >
+          <div class="reveal">
+            <div class="section-tag">// about.me</div>
+            <h2 class="section-title">Men <span>haqimda</span></h2>
+            <div class="about-text">
+              <p>
+                Men <strong>Xorazmda</strong> yashovchi frontend dasturchiman.
+                <strong>1 yildan</strong> beri HTML, CSS va JavaScript
+                o'rganaman va har kuni yangi narsalar kashf etaman.
+              </p>
+              <p>
+                Asosan <strong>landing page</strong> va ko'p sahifali saytlar
+                yasayman. Hozir <strong>React</strong> o'rganishni boshladim va
+                kelajakda full-stack dasturchi bo'lishni maqsad qilganman.
+              </p>
+              <p>
+                Al-Xorazmiy Vorislari dasturida ta'lim olaman va Coursera orqali
+                <strong>Google sertifikatlarini</strong> muvaffaqiyatli
+                tugatganman.
+              </p>
+            </div>
+          </div>
+          <div class="about-stats reveal">
+            <div class="stat-box">
+              <div class="stat-num">1+</div>
+              <div class="stat-label">Yil tajriba</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num">5+</div>
+              <div class="stat-label">Loyihalar</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num">11</div>
+              <div class="stat-label">Sertifikatlar</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num">∞</div>
+              <div class="stat-label">O'rganish istagi</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="section-tag reveal">// skills.list</div>
+      <h2 class="section-title reveal">Ko'nik<span>malarim</span></h2>
+      <div class="skills-wrap">
+        <div class="reveal">
+          <div class="skills-group-label">Asosiy texnologiyalar</div>
+          <div class="skills-grid">
+            <div class="skill-chip">
+              <span class="s-icon">🌐</span><span class="s-name">HTML5</span>
+            </div>
+            <div class="skill-chip">
+              <span class="s-icon">🎨</span><span class="s-name">CSS3</span>
+            </div>
+            <div class="skill-chip">
+              <span class="s-icon">⚡</span
+              ><span class="s-name">JavaScript ES6+</span>
+            </div>
+            <div class="skill-chip">
+              <span class="s-icon">🐙</span
+              ><span class="s-name">Git & GitHub</span>
+            </div>
+            <div class="skill-chip">
+              <span class="s-icon">📱</span
+              ><span class="s-name">Responsive Design</span>
+            </div>
+            <div class="skill-chip">
+              <span class="s-icon">🖌️</span
+              ><span class="s-name">SCSS / SASS</span>
+            </div>
+            <div class="skill-chip">
+              <span class="s-icon">💨</span
+              ><span class="s-name">Tailwind CSS</span>
+            </div>
+          </div>
+        </div>
+        <div class="reveal">
+          <div class="skills-group-label">O'rganayotganlar</div>
+          <div class="skills-grid">
+            <div class="skill-chip">
+              <span class="s-icon">⚛️</span><span class="s-name">React</span>
+            </div>
+            <div class="skill-chip">
+              <span class="s-icon">🎭</span><span class="s-name">Figma</span>
+            </div>
+          </div>
+        </div>
+        <div class="reveal">
+          <div class="skills-group-label">Asboblar</div>
+          <div class="skills-grid">
+            <div class="skill-chip">
+              <span class="s-icon">💻</span><span class="s-name">VS Code</span>
+            </div>
+            <div class="skill-chip">
+              <span class="s-icon">🔍</span
+              ><span class="s-name">Chrome DevTools</span>
+            </div>
+            <div class="skill-chip">
+              <span class="s-icon">🚀</span><span class="s-name">Vercel</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <div id="projects" style="background: var(--bg2); padding: 100px 0">
+      <div
+        class="inner"
+        style="max-width: 1200px; margin: 0 auto; padding: 0 80px"
+      >
+        <div class="section-tag reveal">// projects.all</div>
+        <h2 class="section-title reveal">Loyi<span>halarim</span></h2>
+        <div class="projects-grid">
+          <div class="project-card reveal">
+            <div class="project-thumb">
+              <iframe
+                src="https://first-project-8flm.vercel.app/"
+                loading="lazy"
+                title="First Project"
+              ></iframe>
+              <div class="thumb-overlay"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-name">First Project</div>
+              <p class="project-desc">
+                Onlayn ta'lim platformasi uchun landing page. Noldan yaratilgan
+                birinchi to'liq veb-loyiha.
+              </p>
+              <div class="project-tags">
+                <span class="p-tag">HTML</span>
+                <span class="p-tag">CSS</span>
+                <span class="p-tag">Landing Page</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://first-project-8flm.vercel.app/"
+                  target="_blank"
+                  class="p-link p-link-demo"
+                  >↗ Demo</a
+                >
+                <a
+                  href="https://github.com/mansurbekov1c/FirstProject"
+                  target="_blank"
+                  class="p-link p-link-code"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="project-thumb">
+              <iframe
+                src="https://boldo-bice.vercel.app/"
+                loading="lazy"
+                title="Boldo"
+              ></iframe>
+              <div class="thumb-overlay"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-name">Boldo</div>
+              <p class="project-desc">
+                Home, About va Blog bo'limlari bilan to'liq ko'p sahifali biznes
+                vebsayt shabloni.
+              </p>
+              <div class="project-tags">
+                <span class="p-tag">HTML</span>
+                <span class="p-tag">CSS</span>
+                <span class="p-tag">Multi-page</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://boldo-bice.vercel.app/"
+                  target="_blank"
+                  class="p-link p-link-demo"
+                  >↗ Demo</a
+                >
+                <a
+                  href="https://github.com/mansurbekov1c/Boldo"
+                  target="_blank"
+                  class="p-link p-link-code"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="project-thumb">
+              <iframe
+                src="https://monito-ten.vercel.app/"
+                loading="lazy"
+                title="Monito"
+              ></iframe>
+              <div class="thumb-overlay"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-name">Monito</div>
+              <p class="project-desc">
+                Uy hayvonlari do'koni vebsayti. Mahsulot katalogi va zamonaviy
+                responsive dizayn.
+              </p>
+              <div class="project-tags">
+                <span class="p-tag">HTML</span>
+                <span class="p-tag">CSS</span>
+                <span class="p-tag">E-commerce UI</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://monito-ten.vercel.app/"
+                  target="_blank"
+                  class="p-link p-link-demo"
+                  >↗ Demo</a
+                >
+                <a
+                  href="https://github.com/mansurbekov1c/Monito"
+                  target="_blank"
+                  class="p-link p-link-code"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="project-thumb">
+              <iframe
+                src="https://blog-title-three.vercel.app/"
+                loading="lazy"
+                title="Blog Title"
+              ></iframe>
+              <div class="thumb-overlay"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-name">Blog Title</div>
+              <p class="project-desc">
+                Tipografiya va kontent dizayniga e'tibor qaratilgan zamonaviy
+                blog sahifasi.
+              </p>
+              <div class="project-tags">
+                <span class="p-tag">HTML</span>
+                <span class="p-tag">CSS</span>
+                <span class="p-tag">Blog</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://blog-title-three.vercel.app/"
+                  target="_blank"
+                  class="p-link p-link-demo"
+                  >↗ Demo</a
+                >
+                <a
+                  href="https://github.com/mansurbekov1c/Blog-Title"
+                  target="_blank"
+                  class="p-link p-link-code"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="project-thumb">
+              <iframe
+                src="https://designer-nine-beryl.vercel.app/"
+                loading="lazy"
+                title="Designer"
+              ></iframe>
+              <div class="thumb-overlay"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-name">Designer</div>
+              <p class="project-desc">
+                Ijodiy UI kompozitsiyasi va vizual estetikani o'rganuvchi dizayn
+                loyihasi.
+              </p>
+              <div class="project-tags">
+                <span class="p-tag">HTML</span>
+                <span class="p-tag">CSS</span>
+                <span class="p-tag">UI Design</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://designer-nine-beryl.vercel.app/"
+                  target="_blank"
+                  class="p-link p-link-demo"
+                  >↗ Demo</a
+                >
+                <a
+                  href="https://github.com/mansurbekov1c/Designer"
+                  target="_blank"
+                  class="p-link p-link-code"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="section-tag reveal">// contact.me</div>
+      <h2 class="section-title reveal">Bog'<span>laning</span></h2>
+      <div class="contact-wrap">
+        <div class="reveal">
+          <p class="contact-intro">
+            Loyiha yoki hamkorlik bo'yicha murojaat qilishingiz mumkin. Har doim
+            javob beraman! 🤝
+          </p>
+          <div class="contact-links">
+            <a href="mailto:abdullayevjorabek1pc@gmail.com" class="c-link">
+              <div class="c-icon">📧</div>
+              <div class="c-info">
+                <div class="c-type">Email</div>
+                <div class="c-val">abdullayevjorabek1pc@gmail.com</div>
+              </div>
+            </a>
+            <a
+              href="https://t.me/mansurbekov11c"
+              target="_blank"
+              class="c-link"
+            >
+              <div class="c-icon">✈️</div>
+              <div class="c-info">
+                <div class="c-type">Telegram</div>
+                <div class="c-val">@mansurbekov11c</div>
+              </div>
+            </a>
+            <a
+              href="https://github.com/mansurbekov1c"
+              target="_blank"
+              class="c-link"
+            >
+              <div class="c-icon">🐙</div>
+              <div class="c-info">
+                <div class="c-type">GitHub</div>
+                <div class="c-val">github.com/mansurbekov1c</div>
+              </div>
+            </a>
+            <a
+              href="https://instagram.com/_mansurbekov1c"
+              target="_blank"
+              class="c-link"
+            >
+              <div class="c-icon">📸</div>
+              <div class="c-info">
+                <div class="c-type">Instagram</div>
+                <div class="c-val">@_mansurbekov1c</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form reveal">
+          <div class="fg">
+            <label>Ismingiz</label>
+            <input type="text" id="cn" placeholder="Ism Familiya" />
+          </div>
+          <div class="fg">
+            <label>Emailingiz</label>
+            <input type="email" id="ce" placeholder="email@gmail.com" />
+          </div>
+          <div class="fg">
+            <label>Xabar</label>
+            <textarea id="cm" placeholder="Salom Jo'rabek, ..."></textarea>
+          </div>
+          <button
+            class="btn btn-primary"
+            onclick="sendForm()"
+            style="width: 100%; justify-content: center"
+          >
+            Xabar yuborish →
+          </button>
+          <div class="form-success" id="formOk">
+            ✅ Xabar yuborildi! Tez orada javob beraman.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p class="footer-copy">
+        © 2025 Jo'rabek Abdullayev. Barcha huquqlar himoyalangan.
+      </p>
+      <div class="footer-socials">
+        <a
+          href="https://github.com/mansurbekov1c"
+          target="_blank"
+          class="social-btn"
+          title="GitHub"
+          >🐙</a
+        >
+        <a
+          href="https://t.me/mansurbekov11c"
+          target="_blank"
+          class="social-btn"
+          title="Telegram"
+          >✈️</a
+        >
+        <a
+          href="https://instagram.com/_mansurbekov1c"
+          target="_blank"
+          class="social-btn"
+          title="Instagram"
+          >📸</a
+        >
+      </div>
+    </footer>
+
+    <script src="/main.js"></script>
+  </body>
+</html>
