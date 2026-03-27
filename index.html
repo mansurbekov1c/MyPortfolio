@@ -4,42 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <title>Jo'rabek Abdullayev — Frontend Developer</title>
-    <link rel="stylesheet" href="/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
       rel="stylesheet"
     />
+<link rel="stylesheet" href="/style.css">
   </head>
   <body>
     <!-- NAVBAR -->
     <nav id="navbar">
-      <a class="nav-logo" href="#home">
-        <span class="bracket">&lt;</span>JA<span class="bracket">/&gt;</span>
-      </a>
+      <a class="nav-logo" href="#home"
+        ><span class="br">&lt;</span>JA<span class="br">/&gt;</span></a
+      >
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#certs">Certificates</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <button class="burger" id="burger" onclick="toggleMenu()">
         <span></span><span></span><span></span>
       </button>
     </nav>
-
-    <!-- MOBILE MENU -->
     <div class="mobile-menu" id="mobileMenu">
       <a href="#home" onclick="closeMenu()">Home</a>
       <a href="#about" onclick="closeMenu()">About</a>
       <a href="#skills" onclick="closeMenu()">Skills</a>
       <a href="#projects" onclick="closeMenu()">Projects</a>
+      <a href="#certs" onclick="closeMenu()">Certificates</a>
       <a href="#contact" onclick="closeMenu()">Contact</a>
     </div>
 
     <!-- HERO -->
     <section id="home">
-      <div class="hero-left reveal">
+      <div class="reveal">
         <p class="hero-greeting">// Salom, dunyo! 👋</p>
         <h1 class="hero-name">Jo'rabek<br />Abdullayev</h1>
         <p class="hero-role"><strong>Frontend Developer</strong></p>
@@ -48,20 +48,20 @@
           chiroyli dizayn va foydalanuvchiga qulay saytlar yarataman.
         </p>
         <div class="hero-btns">
-          <a href="#projects" class="btn btn-primary">Loyihalarimni ko'rish</a>
-          <a href="cv.pdf" class="btn btn-secondary" download
-            >CV yuklab olish</a
-          >
+          <a href="#projects" class="btn btn-p">Loyihalarimni ko'rish</a>
+          <a href="cv.pdf" class="btn btn-s" download>CV yuklab olish</a>
         </div>
       </div>
-
-      <div class="hero-right reveal">
+      <div
+        class="hero-right reveal"
+        style="display: flex; justify-content: center"
+      >
         <div class="code-window">
           <div class="code-header">
             <div class="dot dot-r"></div>
             <div class="dot dot-y"></div>
             <div class="dot dot-g"></div>
-            <span class="code-filename">jorabek.js</span>
+            <span class="code-fn">jorabek.js</span>
           </div>
           <div class="code-body">
             <span class="cl"
@@ -75,18 +75,18 @@
             <span class="cl">
               location: <span class="str">"Xorazm, UZ"</span>,</span
             >
-            <span class="cl"> skills: [</span>
             <span class="cl">
-              <span class="str">"HTML"</span>,
+              skills: [<span class="str">"HTML"</span>,
               <span class="str">"CSS"</span>,</span
             >
-            <span class="cl"> <span class="str">"JavaScript"</span>,</span>
-            <span class="cl"> <span class="str">"Git"</span></span>
-            <span class="cl"> ],</span>
+            <span class="cl">
+              <span class="str">"JavaScript"</span>,
+              <span class="str">"Git"</span>],</span
+            >
             <span class="cl"> learning: <span class="str">"React"</span>,</span>
             <span class="cl"> available: <span class="kw">true</span></span>
             <span class="cl">};</span>
-            <span class="cl"></span>
+            <span class="cl">&nbsp;</span>
             <span class="cl cm">// Open to work! 🚀</span>
             <span class="cl"
               ><span class="fn">console</span>.<span class="fn">log</span>(<span
@@ -100,22 +100,12 @@
     </section>
 
     <!-- ABOUT -->
-    <div id="about" style="background: var(--bg2); padding: 100px 0">
-      <div
-        class="inner"
-        style="max-width: 1200px; margin: 0 auto; padding: 0 80px"
-      >
-        <div
-          style="
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 80px;
-            align-items: center;
-          "
-        >
+    <div class="sec-bg" id="about">
+      <div class="inner">
+        <div class="about-grid">
           <div class="reveal">
-            <div class="section-tag">// about.me</div>
-            <h2 class="section-title">Men <span>haqimda</span></h2>
+            <div class="tag">// about.me</div>
+            <h2 class="sec-title">Men <span>haqimda</span></h2>
             <div class="about-text">
               <p>
                 Men <strong>Xorazmda</strong> yashovchi frontend dasturchiman.
@@ -157,9 +147,9 @@
     </div>
 
     <!-- SKILLS -->
-    <section id="skills">
-      <div class="section-tag reveal">// skills.list</div>
-      <h2 class="section-title reveal">Ko'nik<span>malarim</span></h2>
+    <section class="sec" id="skills">
+      <div class="tag reveal">// skills.list</div>
+      <h2 class="sec-title reveal">Ko'nik<span>malarim</span></h2>
       <div class="skills-wrap">
         <div class="reveal">
           <div class="skills-group-label">Asosiy texnologiyalar</div>
@@ -176,7 +166,7 @@
             </div>
             <div class="skill-chip">
               <span class="s-icon">🐙</span
-              ><span class="s-name">Git & GitHub</span>
+              ><span class="s-name">Git &amp; GitHub</span>
             </div>
             <div class="skill-chip">
               <span class="s-icon">📱</span
@@ -222,23 +212,21 @@
     </section>
 
     <!-- PROJECTS -->
-    <div id="projects" style="background: var(--bg2); padding: 100px 0">
-      <div
-        class="inner"
-        style="max-width: 1200px; margin: 0 auto; padding: 0 80px"
-      >
-        <div class="section-tag reveal">// projects.all</div>
-        <h2 class="section-title reveal">Loyi<span>halarim</span></h2>
+    <div class="sec-bg" id="projects">
+      <div class="inner">
+        <div class="tag reveal">// projects.all</div>
+        <h2 class="sec-title reveal">Loyi<span>halarim</span></h2>
         <div class="projects-grid">
           <div class="project-card reveal">
-            <div class="project-thumb">
-              <iframe
-                src="https://first-project-8flm.vercel.app/"
-                loading="lazy"
-                title="First Project"
-              ></iframe>
-              <div class="thumb-overlay"></div>
-            </div>
+            <a
+              href="https://first-project-8flm.vercel.app/"
+              target="_blank"
+              class="project-thumb"
+              style="background: linear-gradient(135deg, #1a2030, #0f1520)"
+            >
+              <span class="p-emoji">🎓</span>
+              <span class="p-url">first-project ↗</span>
+            </a>
             <div class="project-body">
               <div class="project-name">First Project</div>
               <p class="project-desc">
@@ -246,9 +234,8 @@
                 birinchi to'liq veb-loyiha.
               </p>
               <div class="project-tags">
-                <span class="p-tag">HTML</span>
-                <span class="p-tag">CSS</span>
-                <span class="p-tag">Landing Page</span>
+                <span class="p-tag">HTML</span><span class="p-tag">CSS</span
+                ><span class="p-tag">Landing Page</span>
               </div>
               <div class="project-links">
                 <a
@@ -268,14 +255,15 @@
           </div>
 
           <div class="project-card reveal">
-            <div class="project-thumb">
-              <iframe
-                src="https://boldo-bice.vercel.app/"
-                loading="lazy"
-                title="Boldo"
-              ></iframe>
-              <div class="thumb-overlay"></div>
-            </div>
+            <a
+              href="https://boldo-bice.vercel.app/"
+              target="_blank"
+              class="project-thumb"
+              style="background: linear-gradient(135deg, #1a2535, #0f1828)"
+            >
+              <span class="p-emoji">💼</span>
+              <span class="p-url">boldo ↗</span>
+            </a>
             <div class="project-body">
               <div class="project-name">Boldo</div>
               <p class="project-desc">
@@ -283,9 +271,8 @@
                 vebsayt shabloni.
               </p>
               <div class="project-tags">
-                <span class="p-tag">HTML</span>
-                <span class="p-tag">CSS</span>
-                <span class="p-tag">Multi-page</span>
+                <span class="p-tag">HTML</span><span class="p-tag">CSS</span
+                ><span class="p-tag">Multi-page</span>
               </div>
               <div class="project-links">
                 <a
@@ -305,14 +292,15 @@
           </div>
 
           <div class="project-card reveal">
-            <div class="project-thumb">
-              <iframe
-                src="https://monito-ten.vercel.app/"
-                loading="lazy"
-                title="Monito"
-              ></iframe>
-              <div class="thumb-overlay"></div>
-            </div>
+            <a
+              href="https://monito-ten.vercel.app/"
+              target="_blank"
+              class="project-thumb"
+              style="background: linear-gradient(135deg, #1a2820, #0f1a12)"
+            >
+              <span class="p-emoji">🐾</span>
+              <span class="p-url">monito ↗</span>
+            </a>
             <div class="project-body">
               <div class="project-name">Monito</div>
               <p class="project-desc">
@@ -320,9 +308,8 @@
                 responsive dizayn.
               </p>
               <div class="project-tags">
-                <span class="p-tag">HTML</span>
-                <span class="p-tag">CSS</span>
-                <span class="p-tag">E-commerce UI</span>
+                <span class="p-tag">HTML</span><span class="p-tag">CSS</span
+                ><span class="p-tag">E-commerce UI</span>
               </div>
               <div class="project-links">
                 <a
@@ -342,14 +329,15 @@
           </div>
 
           <div class="project-card reveal">
-            <div class="project-thumb">
-              <iframe
-                src="https://blog-title-three.vercel.app/"
-                loading="lazy"
-                title="Blog Title"
-              ></iframe>
-              <div class="thumb-overlay"></div>
-            </div>
+            <a
+              href="https://blog-title-three.vercel.app/"
+              target="_blank"
+              class="project-thumb"
+              style="background: linear-gradient(135deg, #25201a, #170f08)"
+            >
+              <span class="p-emoji">📝</span>
+              <span class="p-url">blog-title ↗</span>
+            </a>
             <div class="project-body">
               <div class="project-name">Blog Title</div>
               <p class="project-desc">
@@ -357,9 +345,8 @@
                 blog sahifasi.
               </p>
               <div class="project-tags">
-                <span class="p-tag">HTML</span>
-                <span class="p-tag">CSS</span>
-                <span class="p-tag">Blog</span>
+                <span class="p-tag">HTML</span><span class="p-tag">CSS</span
+                ><span class="p-tag">Blog</span>
               </div>
               <div class="project-links">
                 <a
@@ -379,14 +366,15 @@
           </div>
 
           <div class="project-card reveal">
-            <div class="project-thumb">
-              <iframe
-                src="https://designer-nine-beryl.vercel.app/"
-                loading="lazy"
-                title="Designer"
-              ></iframe>
-              <div class="thumb-overlay"></div>
-            </div>
+            <a
+              href="https://designer-nine-beryl.vercel.app/"
+              target="_blank"
+              class="project-thumb"
+              style="background: linear-gradient(135deg, #20182a, #110a1a)"
+            >
+              <span class="p-emoji">🎨</span>
+              <span class="p-url">designer ↗</span>
+            </a>
             <div class="project-body">
               <div class="project-name">Designer</div>
               <p class="project-desc">
@@ -394,9 +382,8 @@
                 loyihasi.
               </p>
               <div class="project-tags">
-                <span class="p-tag">HTML</span>
-                <span class="p-tag">CSS</span>
-                <span class="p-tag">UI Design</span>
+                <span class="p-tag">HTML</span><span class="p-tag">CSS</span
+                ><span class="p-tag">UI Design</span>
               </div>
               <div class="project-links">
                 <a
@@ -418,86 +405,246 @@
       </div>
     </div>
 
-    <!-- CONTACT -->
-    <section id="contact">
-      <div class="section-tag reveal">// contact.me</div>
-      <h2 class="section-title reveal">Bog'<span>laning</span></h2>
-      <div class="contact-wrap">
-        <div class="reveal">
-          <p class="contact-intro">
-            Loyiha yoki hamkorlik bo'yicha murojaat qilishingiz mumkin. Har doim
-            javob beraman! 🤝
-          </p>
-          <div class="contact-links">
-            <a href="mailto:abdullayevjorabek1pc@gmail.com" class="c-link">
-              <div class="c-icon">📧</div>
-              <div class="c-info">
-                <div class="c-type">Email</div>
-                <div class="c-val">abdullayevjorabek1pc@gmail.com</div>
-              </div>
-            </a>
-            <a
-              href="https://t.me/mansurbekov11c"
-              target="_blank"
-              class="c-link"
-            >
-              <div class="c-icon">✈️</div>
-              <div class="c-info">
-                <div class="c-type">Telegram</div>
-                <div class="c-val">@mansurbekov11c</div>
-              </div>
-            </a>
-            <a
-              href="https://github.com/mansurbekov1c"
-              target="_blank"
-              class="c-link"
-            >
-              <div class="c-icon">🐙</div>
-              <div class="c-info">
-                <div class="c-type">GitHub</div>
-                <div class="c-val">github.com/mansurbekov1c</div>
-              </div>
-            </a>
-            <a
-              href="https://instagram.com/_mansurbekov1c"
-              target="_blank"
-              class="c-link"
-            >
-              <div class="c-icon">📸</div>
-              <div class="c-info">
-                <div class="c-type">Instagram</div>
-                <div class="c-val">@_mansurbekov1c</div>
-              </div>
-            </a>
+    <!-- CERTIFICATES -->
+    <section class="sec" id="certs">
+      <div class="tag reveal">// certificates</div>
+      <h2 class="sec-title reveal">Sertifi<span>katlarim</span></h2>
+      <div class="certs-grid">
+        <a
+          href="https://www.coursera.org/account/accomplishments/certificate/AM508LP0ALTB"
+          target="_blank"
+          class="cert-card reveal"
+        >
+          <span class="cert-ico">🏅</span>
+          <div>
+            <div class="cert-title">Technical Support Fundamentals</div>
+            <div class="cert-issuer">Coursera — Google</div>
+            <div class="cert-view">Ko'rish →</div>
           </div>
-        </div>
+        </a>
+        <a
+          href="https://www.coursera.org/account/accomplishments/certificate/V7DHHCYKN3LQ"
+          target="_blank"
+          class="cert-card reveal"
+        >
+          <span class="cert-ico">🏅</span>
+          <div>
+            <div class="cert-title">
+              The Bits and Bytes of Computer Networking
+            </div>
+            <div class="cert-issuer">Coursera — Google</div>
+            <div class="cert-view">Ko'rish →</div>
+          </div>
+        </a>
+        <a
+          href="https://www.coursera.org/account/accomplishments/certificate/7TSFQZJ6SSXI"
+          target="_blank"
+          class="cert-card reveal"
+        >
+          <span class="cert-ico">🏅</span>
+          <div>
+            <div class="cert-title">Operating Systems and You</div>
+            <div class="cert-issuer">Coursera — Google</div>
+            <div class="cert-view">Ko'rish →</div>
+          </div>
+        </a>
+        <a
+          href="https://www.coursera.org/account/accomplishments/certificate/UT5W324DUAGG"
+          target="_blank"
+          class="cert-card reveal"
+        >
+          <span class="cert-ico">🏅</span>
+          <div>
+            <div class="cert-title">
+              System Administration and IT Infrastructure
+            </div>
+            <div class="cert-issuer">Coursera — Google</div>
+            <div class="cert-view">Ko'rish →</div>
+          </div>
+        </a>
+        <a
+          href="https://www.coursera.org/account/accomplishments/certificate/V0FT3ONWY4LL"
+          target="_blank"
+          class="cert-card reveal"
+        >
+          <span class="cert-ico">🏅</span>
+          <div>
+            <div class="cert-title">
+              IT Security: Defense Against Digital Dark Arts
+            </div>
+            <div class="cert-issuer">Coursera — Google</div>
+            <div class="cert-view">Ko'rish →</div>
+          </div>
+        </a>
+        <a
+          href="https://www.coursera.org/account/accomplishments/certificate/0F3QQQ6FWSLO"
+          target="_blank"
+          class="cert-card reveal"
+        >
+          <span class="cert-ico">🏅</span>
+          <div>
+            <div class="cert-title">Foundations of User Experience Design</div>
+            <div class="cert-issuer">Coursera — Google</div>
+            <div class="cert-view">Ko'rish →</div>
+          </div>
+        </a>
+        <a
+          href="https://www.coursera.org/account/accomplishments/certificate/1LPPSTWI8QQQ"
+          target="_blank"
+          class="cert-card reveal"
+        >
+          <span class="cert-ico">🏅</span>
+          <div>
+            <div class="cert-title">Start the UX Design Process</div>
+            <div class="cert-issuer">Coursera — Google</div>
+            <div class="cert-view">Ko'rish →</div>
+          </div>
+        </a>
+        <a
+          href="https://www.coursera.org/account/accomplishments/certificate/2IR8825PSDSM"
+          target="_blank"
+          class="cert-card reveal"
+        >
+          <span class="cert-ico">🏅</span>
+          <div>
+            <div class="cert-title">
+              Build Wireframes and Low-Fidelity Prototypes
+            </div>
+            <div class="cert-issuer">Coursera — Google</div>
+            <div class="cert-view">Ko'rish →</div>
+          </div>
+        </a>
+        <a
+          href="https://www.coursera.org/account/accomplishments/certificate/WXM5IWE9PVRA"
+          target="_blank"
+          class="cert-card reveal"
+        >
+          <span class="cert-ico">🏅</span>
+          <div>
+            <div class="cert-title">
+              Conduct UX Research and Test Early Concepts
+            </div>
+            <div class="cert-issuer">Coursera — Google</div>
+            <div class="cert-view">Ko'rish →</div>
+          </div>
+        </a>
+        <a
+          href="https://www.coursera.org/account/accomplishments/specialization/certificate/PN7QUSXFVRCX"
+          target="_blank"
+          class="cert-card reveal"
+        >
+          <span class="cert-ico">🎖️</span>
+          <div>
+            <div class="cert-title">Google IT Support — Specialization</div>
+            <div class="cert-issuer">Coursera — Google · Specialization</div>
+            <div class="cert-view">Ko'rish →</div>
+          </div>
+        </a>
+        <a
+          href="https://www.coursera.org/account/accomplishments/specialization/certificate/RH8HIBUAZWJE"
+          target="_blank"
+          class="cert-card reveal"
+        >
+          <span class="cert-ico">🎖️</span>
+          <div>
+            <div class="cert-title">Google UX Design — Specialization</div>
+            <div class="cert-issuer">Coursera — Google · Specialization</div>
+            <div class="cert-view">Ko'rish →</div>
+          </div>
+        </a>
+      </div>
+    </section>
 
-        <div class="contact-form reveal">
-          <div class="fg">
-            <label>Ismingiz</label>
-            <input type="text" id="cn" placeholder="Ism Familiya" />
+    <!-- CONTACT -->
+    <div class="sec-bg" id="contact">
+      <div class="inner" style="padding-top: 100px; padding-bottom: 100px">
+        <div class="tag reveal">// contact.me</div>
+        <h2 class="sec-title reveal">Bog'<span>laning</span></h2>
+        <div class="contact-wrap">
+          <div class="reveal">
+            <p class="contact-intro">
+              Loyiha yoki hamkorlik bo'yicha murojaat qilishingiz mumkin. Har
+              doim javob beraman! 🤝
+            </p>
+            <div class="contact-links">
+              <a href="mailto:abdullayevjorabek1pc@gmail.com" class="c-link">
+                <div class="c-icon">📧</div>
+                <div>
+                  <div class="c-type">Email</div>
+                  <div class="c-val">abdullayevjorabek1pc@gmail.com</div>
+                </div>
+              </a>
+              <a
+                href="https://t.me/mansurbekov11c"
+                target="_blank"
+                class="c-link"
+              >
+                <div class="c-icon">✈️</div>
+                <div>
+                  <div class="c-type">Telegram</div>
+                  <div class="c-val">@mansurbekov11c</div>
+                </div>
+              </a>
+              <a
+                href="https://github.com/mansurbekov1c"
+                target="_blank"
+                class="c-link"
+              >
+                <div class="c-icon">🐙</div>
+                <div>
+                  <div class="c-type">GitHub</div>
+                  <div class="c-val">github.com/mansurbekov1c</div>
+                </div>
+              </a>
+              <a
+                href="https://instagram.com/_mansurbekov1c"
+                target="_blank"
+                class="c-link"
+              >
+                <div class="c-icon">📸</div>
+                <div>
+                  <div class="c-type">Instagram</div>
+                  <div class="c-val">@_mansurbekov1c</div>
+                </div>
+              </a>
+            </div>
           </div>
-          <div class="fg">
-            <label>Emailingiz</label>
-            <input type="email" id="ce" placeholder="email@gmail.com" />
-          </div>
-          <div class="fg">
-            <label>Xabar</label>
-            <textarea id="cm" placeholder="Salom Jo'rabek, ..."></textarea>
-          </div>
-          <button
-            class="btn btn-primary"
-            onclick="sendForm()"
-            style="width: 100%; justify-content: center"
-          >
-            Xabar yuborish →
-          </button>
-          <div class="form-success" id="formOk">
-            ✅ Xabar yuborildi! Tez orada javob beraman.
+
+          <div class="form reveal">
+            <div class="fg">
+              <label>Ismingiz</label
+              ><input type="text" id="cn" placeholder="Ism Familiya" />
+            </div>
+            <div class="fg">
+              <label>Emailingiz</label
+              ><input type="email" id="ce" placeholder="email@gmail.com" />
+            </div>
+            <div class="fg">
+              <label>Xabar</label
+              ><textarea id="cm" placeholder="Salom Jo'rabek, ..."></textarea>
+            </div>
+            <button
+              class="btn btn-p"
+              id="sendBtn"
+              onclick="sendForm()"
+              style="width: 100%; justify-content: center"
+            >
+              Xabar yuborish →
+            </button>
+            <div class="form-msg form-ok" id="formOk">
+              ✅ Xabar yuborildi! Tez orada javob beraman.
+            </div>
+            <div class="form-msg form-err" id="formErr">
+              ❌ Xatolik yuz berdi. Iltimos, to'g'ridan Telegram yoki email
+              orqali yozing.
+            </div>
+            <div class="form-msg form-loading" id="formLoad">
+              ⏳ Yuborilmoqda...
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
     <!-- FOOTER -->
     <footer>
