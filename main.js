@@ -173,9 +173,9 @@ const translations = {
   nav_contact: { uz: "Contact", en: "Contact", ru: "Контакты" },
 
   hero_greeting: {
-    uz: "// Salom, dunyo! 👋",
-    en: "// Hello, world! 👋",
-    ru: "// Привет, мир! 👋",
+    uz: "// Zamonaviy veb-tajribalar yaratish",
+    en: "// Building modern web experiences",
+    ru: "// Создаю современные веб-опыты",
   },
   hero_role: {
     uz: "Frontend Developer",
