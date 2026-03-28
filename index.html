@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="uz">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
@@ -8,7 +8,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
       rel="stylesheet"
     />
-<link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/style.css">
   </head>
   <body>
     <!-- NAVBAR -->
@@ -17,39 +17,46 @@
         ><span class="br">&lt;</span>JA<span class="br">/&gt;</span></a
       >
       <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#certs">Certificates</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#home" data-i18n="nav_home">Home</a></li>
+        <li><a href="#about" data-i18n="nav_about">About</a></li>
+        <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
+        <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
+        <li><a href="#certs" data-i18n="nav_certs">Certificates</a></li>
+        <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
       </ul>
+      <div class="nav-controls">
+        <select id="lang-select" class="lang-select">
+          <option value="en">EN</option>
+          <option value="uz">UZ</option>
+          <option value="ru">RU</option>
+        </select>
+        <button id="theme-btn" class="theme-btn" title="Toggle Theme">🌙</button>
+      </div>
       <button class="burger" id="burger" onclick="toggleMenu()">
         <span></span><span></span><span></span>
       </button>
     </nav>
     <div class="mobile-menu" id="mobileMenu">
-      <a href="#home" onclick="closeMenu()">Home</a>
-      <a href="#about" onclick="closeMenu()">About</a>
-      <a href="#skills" onclick="closeMenu()">Skills</a>
-      <a href="#projects" onclick="closeMenu()">Projects</a>
-      <a href="#certs" onclick="closeMenu()">Certificates</a>
-      <a href="#contact" onclick="closeMenu()">Contact</a>
+      <a href="#home" onclick="closeMenu()" data-i18n="nav_home">Home</a>
+      <a href="#about" onclick="closeMenu()" data-i18n="nav_about">About</a>
+      <a href="#skills" onclick="closeMenu()" data-i18n="nav_skills">Skills</a>
+      <a href="#projects" onclick="closeMenu()" data-i18n="nav_projects">Projects</a>
+      <a href="#certs" onclick="closeMenu()" data-i18n="nav_certs">Certificates</a>
+      <a href="#contact" onclick="closeMenu()" data-i18n="nav_contact">Contact</a>
     </div>
 
     <!-- HERO -->
     <section id="home">
       <div class="reveal">
-        <p class="hero-greeting">// Salom, dunyo! 👋</p>
+        <p class="hero-greeting" data-i18n="hero_greeting">// Hello, world! 👋</p>
         <h1 class="hero-name">Jo'rabek<br />Abdullayev</h1>
-        <p class="hero-role"><strong>Frontend Developer</strong></p>
-        <p class="hero-desc">
-          Men veb-interfeyslar yasashga ixtisoslashgan frontendchiman. Toza kod,
-          chiroyli dizayn va foydalanuvchiga qulay saytlar yarataman.
+        <p class="hero-role"><strong data-i18n="hero_role">Frontend Developer</strong></p>
+        <p class="hero-desc" data-i18n="hero_desc">
+          I am a frontend developer specializing in building web interfaces. I create user-friendly websites with clean code and beautiful design.
         </p>
         <div class="hero-btns">
-          <a href="#projects" class="btn btn-p">Loyihalarimni ko'rish</a>
-          <a href="cv.pdf" class="btn btn-s" download>CV yuklab olish</a>
+          <a href="#projects" class="btn btn-p" data-i18n="hero_btn_projects">View my projects</a>
+          <a href="cv.pdf" class="btn btn-s" download data-i18n="hero_btn_cv">Download CV</a>
         </div>
       </div>
       <div
@@ -104,42 +111,36 @@
       <div class="inner">
         <div class="about-grid">
           <div class="reveal">
-            <div class="tag">// about.me</div>
-            <h2 class="sec-title">Men <span>haqimda</span></h2>
+            <div class="tag" data-i18n="about_tag">// about.me</div>
+            <h2 class="sec-title"><span data-i18n="about_title_1">About </span><span data-i18n="about_title_2">me</span></h2>
             <div class="about-text">
-              <p>
-                Men <strong>Xorazmda</strong> yashovchi frontend dasturchiman.
-                <strong>1 yildan</strong> beri HTML, CSS va JavaScript
-                o'rganaman va har kuni yangi narsalar kashf etaman.
+              <p data-i18n="about_p1">
+                I am a frontend developer based in <strong>Xorazm</strong>. I have been learning HTML, CSS, and JavaScript for <strong>1 year</strong>, discovering new things every day.
               </p>
-              <p>
-                Asosan <strong>landing page</strong> va ko'p sahifali saytlar
-                yasayman. Hozir <strong>React</strong> o'rganishni boshladim va
-                kelajakda full-stack dasturchi bo'lishni maqsad qilganman.
+              <p data-i18n="about_p2">
+                I mostly build <strong>landing pages</strong> and multi-page websites. I recently started learning <strong>React</strong> and aim to become a full-stack developer in the future.
               </p>
-              <p>
-                Al-Xorazmiy Vorislari dasturida ta'lim olaman va Coursera orqali
-                <strong>Google sertifikatlarini</strong> muvaffaqiyatli
-                tugatganman.
+              <p data-i18n="about_p3">
+                I study in the 'Heirs of Al-Khwarizmi' program and have successfully completed <strong>Google certificates</strong> via Coursera.
               </p>
             </div>
           </div>
           <div class="about-stats reveal">
             <div class="stat-box">
               <div class="stat-num">1+</div>
-              <div class="stat-label">Yil tajriba</div>
+              <div class="stat-label" data-i18n="stat_exp_label">Year experience</div>
             </div>
             <div class="stat-box">
               <div class="stat-num">5+</div>
-              <div class="stat-label">Loyihalar</div>
+              <div class="stat-label" data-i18n="stat_proj_label">Projects</div>
             </div>
             <div class="stat-box">
               <div class="stat-num">11</div>
-              <div class="stat-label">Sertifikatlar</div>
+              <div class="stat-label" data-i18n="stat_cert_label">Certificates</div>
             </div>
             <div class="stat-box">
               <div class="stat-num">∞</div>
-              <div class="stat-label">O'rganish istagi</div>
+              <div class="stat-label" data-i18n="stat_learn_label">Desire to learn</div>
             </div>
           </div>
         </div>
@@ -148,11 +149,11 @@
 
     <!-- SKILLS -->
     <section class="sec" id="skills">
-      <div class="tag reveal">// skills.list</div>
-      <h2 class="sec-title reveal">Ko'nik<span>malarim</span></h2>
+      <div class="tag reveal" data-i18n="skills_tag">// skills.list</div>
+      <h2 class="sec-title reveal"><span data-i18n="skills_title_1">My </span><span data-i18n="skills_title_2">Skills</span></h2>
       <div class="skills-wrap">
         <div class="reveal">
-          <div class="skills-group-label">Asosiy texnologiyalar</div>
+          <div class="skills-group-label" data-i18n="skills_group_1">Core Technologies</div>
           <div class="skills-grid">
             <div class="skill-chip">
               <span class="s-icon">🌐</span><span class="s-name">HTML5</span>
@@ -183,7 +184,7 @@
           </div>
         </div>
         <div class="reveal">
-          <div class="skills-group-label">O'rganayotganlar</div>
+          <div class="skills-group-label" data-i18n="skills_group_2">Learning</div>
           <div class="skills-grid">
             <div class="skill-chip">
               <span class="s-icon">⚛️</span><span class="s-name">React</span>
@@ -194,7 +195,7 @@
           </div>
         </div>
         <div class="reveal">
-          <div class="skills-group-label">Asboblar</div>
+          <div class="skills-group-label" data-i18n="skills_group_3">Tools</div>
           <div class="skills-grid">
             <div class="skill-chip">
               <span class="s-icon">💻</span><span class="s-name">VS Code</span>
@@ -214,24 +215,23 @@
     <!-- PROJECTS -->
     <div class="sec-bg" id="projects">
       <div class="inner">
-        <div class="tag reveal">// projects.all</div>
-        <h2 class="sec-title reveal">Loyi<span>halarim</span></h2>
+        <div class="tag reveal" data-i18n="projects_tag">// projects.all</div>
+        <h2 class="sec-title reveal"><span data-i18n="projects_title_1">My </span><span data-i18n="projects_title_2">Projects</span></h2>
         <div class="projects-grid">
           <div class="project-card reveal">
             <a
               href="https://first-project-8flm.vercel.app/"
               target="_blank"
               class="project-thumb"
-              style="background: linear-gradient(135deg, #1a2030, #0f1520)"
+              style="background: var(--grad1)"
             >
               <span class="p-emoji">🎓</span>
               <span class="p-url">first-project ↗</span>
             </a>
             <div class="project-body">
               <div class="project-name">First Project</div>
-              <p class="project-desc">
-                Onlayn ta'lim platformasi uchun landing page. Noldan yaratilgan
-                birinchi to'liq veb-loyiha.
+              <p class="project-desc" data-i18n="proj_desc_1">
+                Landing page for an online education platform. The first full web project created from scratch.
               </p>
               <div class="project-tags">
                 <span class="p-tag">HTML</span><span class="p-tag">CSS</span
@@ -259,16 +259,15 @@
               href="https://boldo-bice.vercel.app/"
               target="_blank"
               class="project-thumb"
-              style="background: linear-gradient(135deg, #1a2535, #0f1828)"
+              style="background: var(--grad2)"
             >
               <span class="p-emoji">💼</span>
               <span class="p-url">boldo ↗</span>
             </a>
             <div class="project-body">
               <div class="project-name">Boldo</div>
-              <p class="project-desc">
-                Home, About va Blog bo'limlari bilan to'liq ko'p sahifali biznes
-                vebsayt shabloni.
+              <p class="project-desc" data-i18n="proj_desc_2">
+                Complete multi-page business website template with Home, About, and Blog sections.
               </p>
               <div class="project-tags">
                 <span class="p-tag">HTML</span><span class="p-tag">CSS</span
@@ -296,16 +295,15 @@
               href="https://monito-ten.vercel.app/"
               target="_blank"
               class="project-thumb"
-              style="background: linear-gradient(135deg, #1a2820, #0f1a12)"
+              style="background: var(--grad3)"
             >
               <span class="p-emoji">🐾</span>
               <span class="p-url">monito ↗</span>
             </a>
             <div class="project-body">
               <div class="project-name">Monito</div>
-              <p class="project-desc">
-                Uy hayvonlari do'koni vebsayti. Mahsulot katalogi va zamonaviy
-                responsive dizayn.
+              <p class="project-desc" data-i18n="proj_desc_3">
+                Pet store website. Product catalog and modern responsive design.
               </p>
               <div class="project-tags">
                 <span class="p-tag">HTML</span><span class="p-tag">CSS</span
@@ -333,16 +331,15 @@
               href="https://blog-title-three.vercel.app/"
               target="_blank"
               class="project-thumb"
-              style="background: linear-gradient(135deg, #25201a, #170f08)"
+              style="background: var(--grad4)"
             >
               <span class="p-emoji">📝</span>
               <span class="p-url">blog-title ↗</span>
             </a>
             <div class="project-body">
               <div class="project-name">Blog Title</div>
-              <p class="project-desc">
-                Tipografiya va kontent dizayniga e'tibor qaratilgan zamonaviy
-                blog sahifasi.
+              <p class="project-desc" data-i18n="proj_desc_4">
+                Modern blog page focused on typography and content design.
               </p>
               <div class="project-tags">
                 <span class="p-tag">HTML</span><span class="p-tag">CSS</span
@@ -370,16 +367,15 @@
               href="https://designer-nine-beryl.vercel.app/"
               target="_blank"
               class="project-thumb"
-              style="background: linear-gradient(135deg, #20182a, #110a1a)"
+              style="background: var(--grad5)"
             >
               <span class="p-emoji">🎨</span>
               <span class="p-url">designer ↗</span>
             </a>
             <div class="project-body">
               <div class="project-name">Designer</div>
-              <p class="project-desc">
-                Ijodiy UI kompozitsiyasi va vizual estetikani o'rganuvchi dizayn
-                loyihasi.
+              <p class="project-desc" data-i18n="proj_desc_5">
+                Design project exploring creative UI composition and visual aesthetics.
               </p>
               <div class="project-tags">
                 <span class="p-tag">HTML</span><span class="p-tag">CSS</span
@@ -407,8 +403,8 @@
 
     <!-- CERTIFICATES -->
     <section class="sec" id="certs">
-      <div class="tag reveal">// certificates</div>
-      <h2 class="sec-title reveal">Sertifi<span>katlarim</span></h2>
+      <div class="tag reveal" data-i18n="certs_tag">// certificates</div>
+      <h2 class="sec-title reveal"><span data-i18n="certs_title_1">My </span><span data-i18n="certs_title_2">Certificates</span></h2>
       <div class="certs-grid">
         <a
           href="https://www.coursera.org/account/accomplishments/certificate/AM508LP0ALTB"
@@ -419,7 +415,7 @@
           <div>
             <div class="cert-title">Technical Support Fundamentals</div>
             <div class="cert-issuer">Coursera — Google</div>
-            <div class="cert-view">Ko'rish →</div>
+            <div class="cert-view" data-i18n="cert_view">View →</div>
           </div>
         </a>
         <a
@@ -433,7 +429,7 @@
               The Bits and Bytes of Computer Networking
             </div>
             <div class="cert-issuer">Coursera — Google</div>
-            <div class="cert-view">Ko'rish →</div>
+            <div class="cert-view" data-i18n="cert_view">View →</div>
           </div>
         </a>
         <a
@@ -445,7 +441,7 @@
           <div>
             <div class="cert-title">Operating Systems and You</div>
             <div class="cert-issuer">Coursera — Google</div>
-            <div class="cert-view">Ko'rish →</div>
+            <div class="cert-view" data-i18n="cert_view">View →</div>
           </div>
         </a>
         <a
@@ -459,7 +455,7 @@
               System Administration and IT Infrastructure
             </div>
             <div class="cert-issuer">Coursera — Google</div>
-            <div class="cert-view">Ko'rish →</div>
+            <div class="cert-view" data-i18n="cert_view">View →</div>
           </div>
         </a>
         <a
@@ -473,7 +469,7 @@
               IT Security: Defense Against Digital Dark Arts
             </div>
             <div class="cert-issuer">Coursera — Google</div>
-            <div class="cert-view">Ko'rish →</div>
+            <div class="cert-view" data-i18n="cert_view">View →</div>
           </div>
         </a>
         <a
@@ -485,7 +481,7 @@
           <div>
             <div class="cert-title">Foundations of User Experience Design</div>
             <div class="cert-issuer">Coursera — Google</div>
-            <div class="cert-view">Ko'rish →</div>
+            <div class="cert-view" data-i18n="cert_view">View →</div>
           </div>
         </a>
         <a
@@ -497,7 +493,7 @@
           <div>
             <div class="cert-title">Start the UX Design Process</div>
             <div class="cert-issuer">Coursera — Google</div>
-            <div class="cert-view">Ko'rish →</div>
+            <div class="cert-view" data-i18n="cert_view">View →</div>
           </div>
         </a>
         <a
@@ -511,7 +507,7 @@
               Build Wireframes and Low-Fidelity Prototypes
             </div>
             <div class="cert-issuer">Coursera — Google</div>
-            <div class="cert-view">Ko'rish →</div>
+            <div class="cert-view" data-i18n="cert_view">View →</div>
           </div>
         </a>
         <a
@@ -525,7 +521,7 @@
               Conduct UX Research and Test Early Concepts
             </div>
             <div class="cert-issuer">Coursera — Google</div>
-            <div class="cert-view">Ko'rish →</div>
+            <div class="cert-view" data-i18n="cert_view">View →</div>
           </div>
         </a>
         <a
@@ -537,7 +533,7 @@
           <div>
             <div class="cert-title">Google IT Support — Specialization</div>
             <div class="cert-issuer">Coursera — Google · Specialization</div>
-            <div class="cert-view">Ko'rish →</div>
+            <div class="cert-view" data-i18n="cert_view">View →</div>
           </div>
         </a>
         <a
@@ -549,7 +545,7 @@
           <div>
             <div class="cert-title">Google UX Design — Specialization</div>
             <div class="cert-issuer">Coursera — Google · Specialization</div>
-            <div class="cert-view">Ko'rish →</div>
+            <div class="cert-view" data-i18n="cert_view">View →</div>
           </div>
         </a>
       </div>
@@ -558,13 +554,12 @@
     <!-- CONTACT -->
     <div class="sec-bg" id="contact">
       <div class="inner" style="padding-top: 100px; padding-bottom: 100px">
-        <div class="tag reveal">// contact.me</div>
-        <h2 class="sec-title reveal">Bog'<span>laning</span></h2>
+        <div class="tag reveal" data-i18n="contact_tag">// contact.me</div>
+        <h2 class="sec-title reveal"><span data-i18n="contact_title_1">Get in </span><span data-i18n="contact_title_2">Touch</span></h2>
         <div class="contact-wrap">
           <div class="reveal">
-            <p class="contact-intro">
-              Loyiha yoki hamkorlik bo'yicha murojaat qilishingiz mumkin. Har
-              doim javob beraman! 🤝
+            <p class="contact-intro" data-i18n="contact_intro">
+              Feel free to reach out for a project or collaboration. I always look forward to answering! 🤝
             </p>
             <div class="contact-links">
               <a href="mailto:abdullayevjorabek1pc@gmail.com" class="c-link">
@@ -612,16 +607,16 @@
 
           <div class="form reveal">
             <div class="fg">
-              <label>Ismingiz</label
-              ><input type="text" id="cn" placeholder="Ism Familiya" />
+              <label data-i18n="contact_form_name">Your Name</label>
+              <input type="text" id="cn" placeholder="John Doe" data-i18n-ph="form_ph_name" />
             </div>
             <div class="fg">
-              <label>Emailingiz</label
-              ><input type="email" id="ce" placeholder="email@gmail.com" />
+              <label data-i18n="contact_form_email">Your Email</label>
+              <input type="email" id="ce" placeholder="email@gmail.com" />
             </div>
             <div class="fg">
-              <label>Xabar</label
-              ><textarea id="cm" placeholder="Salom Jo'rabek, ..."></textarea>
+              <label data-i18n="contact_form_msg">Message</label>
+              <textarea id="cm" placeholder="Hi Jo'rabek, ..." data-i18n-ph="form_ph_msg"></textarea>
             </div>
             <button
               class="btn btn-p"
@@ -629,17 +624,16 @@
               onclick="sendForm()"
               style="width: 100%; justify-content: center"
             >
-              Xabar yuborish →
+              <span data-i18n="contact_btn">Send Message →</span>
             </button>
-            <div class="form-msg form-ok" id="formOk">
-              ✅ Xabar yuborildi! Tez orada javob beraman.
+            <div class="form-msg form-ok" id="formOk" data-i18n="form_ok">
+              ✅ Message sent! I will reply shortly.
             </div>
-            <div class="form-msg form-err" id="formErr">
-              ❌ Xatolik yuz berdi. Iltimos, to'g'ridan Telegram yoki email
-              orqali yozing.
+            <div class="form-msg form-err" id="formErr" data-i18n="form_err">
+              ❌ An error occurred. Please write directly via Telegram or email.
             </div>
-            <div class="form-msg form-loading" id="formLoad">
-              ⏳ Yuborilmoqda...
+            <div class="form-msg form-loading" id="formLoad" data-i18n="form_loading">
+              ⏳ Sending...
             </div>
           </div>
         </div>
@@ -648,8 +642,8 @@
 
     <!-- FOOTER -->
     <footer>
-      <p class="footer-copy">
-        © 2025 Jo'rabek Abdullayev. Barcha huquqlar himoyalangan.
+      <p class="footer-copy" data-i18n="footer_copy">
+        © 2025 Jo'rabek Abdullayev. All rights reserved.
       </p>
       <div class="footer-socials">
         <a
