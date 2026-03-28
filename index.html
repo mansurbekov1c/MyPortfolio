@@ -8,7 +8,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
     <!-- NAVBAR -->
@@ -32,7 +32,9 @@
           <span class="lang-sep">|</span>
           <span class="lang-btn" data-lang="ru">RU</span>
         </div>
-        <button id="theme-btn" class="theme-btn" title="Toggle Theme">🌙</button>
+        <button id="theme-btn" class="theme-btn" title="Toggle Theme">
+          🌙
+        </button>
       </div>
       <button class="burger" id="burger" onclick="toggleMenu()">
         <span></span><span></span><span></span>
@@ -42,26 +44,42 @@
       <a href="#home" onclick="closeMenu()" data-i18n="nav_home">Home</a>
       <a href="#about" onclick="closeMenu()" data-i18n="nav_about">About</a>
       <a href="#skills" onclick="closeMenu()" data-i18n="nav_skills">Skills</a>
-      <a href="#projects" onclick="closeMenu()" data-i18n="nav_projects">Projects</a>
-      <a href="#certs" onclick="closeMenu()" data-i18n="nav_certs">Certificates</a>
-      <a href="#contact" onclick="closeMenu()" data-i18n="nav_contact">Contact</a>
+      <a href="#projects" onclick="closeMenu()" data-i18n="nav_projects"
+        >Projects</a
+      >
+      <a href="#certs" onclick="closeMenu()" data-i18n="nav_certs"
+        >Certificates</a
+      >
+      <a href="#contact" onclick="closeMenu()" data-i18n="nav_contact"
+        >Contact</a
+      >
     </div>
 
     <!-- HERO -->
     <section id="home">
       <div class="reveal">
-        <p class="hero-greeting" data-i18n="hero_greeting">// Building modern web experiences</p>
+        <p class="hero-greeting" data-i18n="hero_greeting">// Hello World</p>
         <h1 class="hero-name">Jo'rabek<br />Abdullayev</h1>
-        <p class="hero-role"><strong data-i18n="hero_role">Frontend Developer</strong></p>
+        <p class="hero-role">
+          <strong data-i18n="hero_role">Frontend Developer</strong>
+        </p>
         <p class="hero-desc" data-i18n="hero_desc">
-          I am a frontend developer specializing in building web interfaces. I create user-friendly websites with clean code and beautiful design.
+          I am a frontend developer specializing in building web interfaces. I
+          create user-friendly websites with clean code and beautiful design.
         </p>
         <div class="hero-btns">
-          <a href="#projects" class="btn btn-p" data-i18n="hero_btn_projects">View my projects</a>
-          <a href="cv.pdf" class="btn btn-s" download data-i18n="hero_btn_cv">Download CV</a>
+          <a href="#projects" class="btn btn-p" data-i18n="hero_btn_projects"
+            >View my projects</a
+          >
+          <a href="cv.pdf" class="btn btn-s" download data-i18n="hero_btn_cv"
+            >Download CV</a
+          >
         </div>
       </div>
-      <div class="hero-right reveal" style="display: flex; justify-content: center; align-items: center;">
+      <div
+        class="hero-right reveal"
+        style="display: flex; justify-content: center; align-items: center"
+      >
         <canvas id="hero-canvas" class="hero-canvas"></canvas>
       </div>
     </section>
@@ -72,16 +90,25 @@
         <div class="about-grid">
           <div class="reveal">
             <div class="tag" data-i18n="about_tag">// about.me</div>
-            <h2 class="sec-title"><span data-i18n="about_title_1">About </span><span data-i18n="about_title_2">me</span></h2>
+            <h2 class="sec-title">
+              <span data-i18n="about_title_1">About </span
+              ><span data-i18n="about_title_2">me</span>
+            </h2>
             <div class="about-text">
               <p data-i18n="about_p1">
-                I am a frontend developer based in <strong>Xorazm</strong>. I have been learning HTML, CSS, and JavaScript for <strong>1 year</strong>, discovering new things every day.
+                I am a frontend developer based in <strong>Xorazm</strong>. I
+                have been learning HTML, CSS, and JavaScript for
+                <strong>1 year</strong>, discovering new things every day.
               </p>
               <p data-i18n="about_p2">
-                I mostly build <strong>landing pages</strong> and multi-page websites. I recently started learning <strong>React</strong> and aim to become a full-stack developer in the future.
+                I mostly build <strong>landing pages</strong> and multi-page
+                websites. I recently started learning <strong>React</strong> and
+                aim to become a full-stack developer in the future.
               </p>
               <p data-i18n="about_p3">
-                I study in the 'Heirs of Al-Khwarizmi' program and have successfully completed <strong>Google certificates</strong> via Coursera.
+                I study in the 'Heirs of Al-Khwarizmi' program and have
+                successfully completed <strong>Google certificates</strong> via
+                Coursera.
               </p>
             </div>
           </div>
@@ -89,31 +116,69 @@
             <div class="about-stats reveal">
               <div class="stat-box">
                 <div class="stat-num">1+</div>
-                <div class="stat-label" data-i18n="stat_exp_label">Year experience</div>
+                <div class="stat-label" data-i18n="stat_exp_label">
+                  Year experience
+                </div>
               </div>
               <div class="stat-box">
                 <div class="stat-num">5+</div>
-                <div class="stat-label" data-i18n="stat_proj_label">Projects</div>
+                <div class="stat-label" data-i18n="stat_proj_label">
+                  Projects
+                </div>
               </div>
               <div class="stat-box">
                 <div class="stat-num">11</div>
-                <div class="stat-label" data-i18n="stat_cert_label">Certificates</div>
+                <div class="stat-label" data-i18n="stat_cert_label">
+                  Certificates
+                </div>
               </div>
               <div class="stat-box">
                 <div class="stat-num">∞</div>
-                <div class="stat-label" data-i18n="stat_learn_label">Desire to learn</div>
+                <div class="stat-label" data-i18n="stat_learn_label">
+                  Desire to learn
+                </div>
               </div>
             </div>
-            
+
             <div class="about-card reveal">
-              <div class="ac-hdr" data-i18n="about_dev_info">Developer Info</div>
+              <div class="ac-hdr" data-i18n="about_dev_info">
+                Developer Info
+              </div>
               <div class="ac-body">
-                <div class="ac-row"><span class="ac-label" data-i18n="info_name">Name:</span> <span class="ac-val">Jo'rabek</span></div>
-                <div class="ac-row"><span class="ac-label" data-i18n="info_role">Role:</span> <span class="ac-val" data-i18n="info_role_val">Frontend Dev</span></div>
-                <div class="ac-row"><span class="ac-label" data-i18n="info_location">Location:</span> <span class="ac-val" data-i18n="info_loc_val">Xorazm, UZ</span></div>
-                <div class="ac-row"><span class="ac-label" data-i18n="info_skills">Skills:</span> <span class="ac-val">HTML, CSS, JS, Git</span></div>
-                <div class="ac-row"><span class="ac-label" data-i18n="info_learning">Learning:</span> <span class="ac-val">React</span></div>
-                <div class="ac-row"><span class="ac-label" data-i18n="info_status">Status:</span> <span class="ac-badge" data-i18n="info_available">Open to work 🚀</span></div>
+                <div class="ac-row">
+                  <span class="ac-label" data-i18n="info_name">Name:</span>
+                  <span class="ac-val">Jo'rabek</span>
+                </div>
+                <div class="ac-row">
+                  <span class="ac-label" data-i18n="info_role">Role:</span>
+                  <span class="ac-val" data-i18n="info_role_val"
+                    >Frontend Dev</span
+                  >
+                </div>
+                <div class="ac-row">
+                  <span class="ac-label" data-i18n="info_location"
+                    >Location:</span
+                  >
+                  <span class="ac-val" data-i18n="info_loc_val"
+                    >Xorazm, UZ</span
+                  >
+                </div>
+                <div class="ac-row">
+                  <span class="ac-label" data-i18n="info_skills">Skills:</span>
+                  <span class="ac-val">HTML, CSS, JS, Git</span>
+                </div>
+                <div class="ac-row">
+                  <span class="ac-label" data-i18n="info_learning"
+                    >Learning:</span
+                  >
+                  <span class="ac-val">React</span>
+                </div>
+                <div class="ac-row">
+                  <span class="ac-label" data-i18n="info_status">Status:</span>
+                  <span class="ac-badge" data-i18n="info_available"
+                    >Open to work 🚀</span
+                  >
+                </div>
               </div>
             </div>
           </div>
@@ -124,10 +189,15 @@
     <!-- SKILLS -->
     <section class="sec" id="skills">
       <div class="tag reveal" data-i18n="skills_tag">// skills.list</div>
-      <h2 class="sec-title reveal"><span data-i18n="skills_title_1">My </span><span data-i18n="skills_title_2">Skills</span></h2>
+      <h2 class="sec-title reveal">
+        <span data-i18n="skills_title_1">My </span
+        ><span data-i18n="skills_title_2">Skills</span>
+      </h2>
       <div class="skills-wrap">
         <div class="reveal">
-          <div class="skills-group-label" data-i18n="skills_group_1">Core Technologies</div>
+          <div class="skills-group-label" data-i18n="skills_group_1">
+            Core Technologies
+          </div>
           <div class="skills-grid">
             <div class="skill-chip">
               <span class="s-icon">🌐</span><span class="s-name">HTML5</span>
@@ -158,7 +228,9 @@
           </div>
         </div>
         <div class="reveal">
-          <div class="skills-group-label" data-i18n="skills_group_2">Learning</div>
+          <div class="skills-group-label" data-i18n="skills_group_2">
+            Learning
+          </div>
           <div class="skills-grid">
             <div class="skill-chip">
               <span class="s-icon">⚛️</span><span class="s-name">React</span>
@@ -190,7 +262,10 @@
     <div class="sec-bg" id="projects">
       <div class="inner">
         <div class="tag reveal" data-i18n="projects_tag">// projects.all</div>
-        <h2 class="sec-title reveal"><span data-i18n="projects_title_1">My </span><span data-i18n="projects_title_2">Projects</span></h2>
+        <h2 class="sec-title reveal">
+          <span data-i18n="projects_title_1">My </span
+          ><span data-i18n="projects_title_2">Projects</span>
+        </h2>
         <div class="projects-grid">
           <div class="project-card reveal">
             <a
@@ -205,7 +280,8 @@
             <div class="project-body">
               <div class="project-name">First Project</div>
               <p class="project-desc" data-i18n="proj_desc_1">
-                Landing page for an online education platform. The first full web project created from scratch.
+                Landing page for an online education platform. The first full
+                web project created from scratch.
               </p>
               <div class="project-tags">
                 <span class="p-tag">HTML</span><span class="p-tag">CSS</span
@@ -241,7 +317,8 @@
             <div class="project-body">
               <div class="project-name">Boldo</div>
               <p class="project-desc" data-i18n="proj_desc_2">
-                Complete multi-page business website template with Home, About, and Blog sections.
+                Complete multi-page business website template with Home, About,
+                and Blog sections.
               </p>
               <div class="project-tags">
                 <span class="p-tag">HTML</span><span class="p-tag">CSS</span
@@ -349,7 +426,8 @@
             <div class="project-body">
               <div class="project-name">Designer</div>
               <p class="project-desc" data-i18n="proj_desc_5">
-                Design project exploring creative UI composition and visual aesthetics.
+                Design project exploring creative UI composition and visual
+                aesthetics.
               </p>
               <div class="project-tags">
                 <span class="p-tag">HTML</span><span class="p-tag">CSS</span
@@ -378,7 +456,10 @@
     <!-- CERTIFICATES -->
     <section class="sec" id="certs">
       <div class="tag reveal" data-i18n="certs_tag">// certificates</div>
-      <h2 class="sec-title reveal"><span data-i18n="certs_title_1">My </span><span data-i18n="certs_title_2">Certificates</span></h2>
+      <h2 class="sec-title reveal">
+        <span data-i18n="certs_title_1">My </span
+        ><span data-i18n="certs_title_2">Certificates</span>
+      </h2>
       <div class="certs-grid">
         <a
           href="https://www.coursera.org/account/accomplishments/certificate/AM508LP0ALTB"
@@ -529,11 +610,15 @@
     <div class="sec-bg" id="contact">
       <div class="inner" style="padding-top: 100px; padding-bottom: 100px">
         <div class="tag reveal" data-i18n="contact_tag">// contact.me</div>
-        <h2 class="sec-title reveal"><span data-i18n="contact_title_1">Get in </span><span data-i18n="contact_title_2">Touch</span></h2>
+        <h2 class="sec-title reveal">
+          <span data-i18n="contact_title_1">Get in </span
+          ><span data-i18n="contact_title_2">Touch</span>
+        </h2>
         <div class="contact-wrap">
           <div class="reveal">
             <p class="contact-intro" data-i18n="contact_intro">
-              Feel free to reach out for a project or collaboration. I always look forward to answering! 🤝
+              Feel free to reach out for a project or collaboration. I always
+              look forward to answering! 🤝
             </p>
             <div class="contact-links">
               <a href="mailto:abdullayevjorabek1pc@gmail.com" class="c-link">
@@ -582,7 +667,12 @@
           <div class="form reveal">
             <div class="fg">
               <label data-i18n="contact_form_name">Your Name</label>
-              <input type="text" id="cn" placeholder="John Doe" data-i18n-ph="form_ph_name" />
+              <input
+                type="text"
+                id="cn"
+                placeholder="John Doe"
+                data-i18n-ph="form_ph_name"
+              />
             </div>
             <div class="fg">
               <label data-i18n="contact_form_email">Your Email</label>
@@ -590,7 +680,11 @@
             </div>
             <div class="fg">
               <label data-i18n="contact_form_msg">Message</label>
-              <textarea id="cm" placeholder="Hi Jo'rabek, ..." data-i18n-ph="form_ph_msg"></textarea>
+              <textarea
+                id="cm"
+                placeholder="Hi Jo'rabek, ..."
+                data-i18n-ph="form_ph_msg"
+              ></textarea>
             </div>
             <button
               class="btn btn-p"
@@ -606,7 +700,11 @@
             <div class="form-msg form-err" id="formErr" data-i18n="form_err">
               ❌ An error occurred. Please write directly via Telegram or email.
             </div>
-            <div class="form-msg form-loading" id="formLoad" data-i18n="form_loading">
+            <div
+              class="form-msg form-loading"
+              id="formLoad"
+              data-i18n="form_loading"
+            >
               ⏳ Sending...
             </div>
           </div>

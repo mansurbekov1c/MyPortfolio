@@ -1,16 +1,22 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
-const dir = 'c:\\\\Users\\\\abdul\\\\OneDrive\\\\Desktop\\\\Projects\\\\MyPortfolio';
+const dir =
+  "c:\\\\Users\\\\abdul\\\\OneDrive\\\\Desktop\\\\Projects\\\\MyPortfolio";
 
 // 1. UPDATE INDEX.HTML
-let html = fs.readFileSync(path.join(dir, 'index.html'), 'utf8');
-html = html.replace(/<div class="cube-container">[\s\S]*?<\/div>\s*<\/div>/, '<canvas id="hero-canvas" class="hero-canvas"></canvas>');
-fs.writeFileSync(path.join(dir, 'index.html'), html);
+let html = fs.readFileSync(path.join(dir, "index.html"), "utf8");
+html = html.replace(
+  /<div class="cube-container">[\s\S]*?<\/div>\s*<\/div>/,
+  '<canvas id="hero-canvas" class="hero-canvas"></canvas>',
+);
+fs.writeFileSync(path.join(dir, "index.html"), html);
 
 // 2. UPDATE STYLE.CSS
-let css = fs.readFileSync(path.join(dir, 'style.css'), 'utf8');
-css = css.replace(/:root\s*\{[\s\S]*?\}/, `:root {
+let css = fs.readFileSync(path.join(dir, "style.css"), "utf8");
+css = css.replace(
+  /:root\s*\{[\s\S]*?\}/,
+  `:root {
   --bg: #09090b;
   --bg2: #09090b;
   --card: rgba(39, 39, 42, 0.4);
@@ -28,9 +34,12 @@ css = css.replace(/:root\s*\{[\s\S]*?\}/, `:root {
   --grad3: transparent;
   --grad4: transparent;
   --grad5: transparent;
-}`);
+}`,
+);
 
-css = css.replace(/body\.light-mode\s*\{[\s\S]*?\}/, `body.light-mode {
+css = css.replace(
+  /body\.light-mode\s*\{[\s\S]*?\}/,
+  `body.light-mode {
   --bg: #fafafa;
   --bg2: #f4f4f5;
   --card: rgba(255, 255, 255, 0.8);
@@ -48,9 +57,12 @@ css = css.replace(/body\.light-mode\s*\{[\s\S]*?\}/, `body.light-mode {
   --grad3: transparent;
   --grad4: transparent;
   --grad5: transparent;
-}`);
+}`,
+);
 
-css = css.replace(/\.sec-title\s*\{[\s\S]*?\}/, `.sec-title {
+css = css.replace(
+  /\.sec-title\s*\{[\s\S]*?\}/,
+  `.sec-title {
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 700;
   margin-bottom: 48px;
@@ -60,9 +72,12 @@ css = css.replace(/\.sec-title\s*\{[\s\S]*?\}/, `.sec-title {
   border-bottom: 1px solid var(--border);
   padding-bottom: 20px;
   width: 100%;
-}`);
+}`,
+);
 
-css = css.replace(/\.tag\s*\{[\s\S]*?\}/, `.tag {
+css = css.replace(
+  /\.tag\s*\{[\s\S]*?\}/,
+  `.tag {
   display: inline-block;
   font-family: "Fira Code", monospace;
   font-size: 0.85rem;
@@ -73,14 +88,19 @@ css = css.replace(/\.tag\s*\{[\s\S]*?\}/, `.tag {
   margin-bottom: 16px;
   letter-spacing: 2px;
   border-bottom: none;
-}`);
+}`,
+);
 
-css = css.replace(/\/\* 3D CUBE[\s\S]*?@keyframes rotateCube \{[\s\S]*?\}\s*\}/, '');
-css += '\\n.hero-canvas { width: 100%; height: 400px; display: block; object-fit: contain; cursor: crosshair; }';
-fs.writeFileSync(path.join(dir, 'style.css'), css);
+css = css.replace(
+  /\/\* 3D CUBE[\s\S]*?@keyframes rotateCube \{[\s\S]*?\}\s*\}/,
+  "",
+);
+css +=
+  "\\n.hero-canvas { width: 100%; height: 400px; display: block; object-fit: contain; cursor: crosshair; }";
+fs.writeFileSync(path.join(dir, "style.css"), css);
 
 // 3. UPDATE MAIN.JS
-let js = fs.readFileSync(path.join(dir, 'main.js'), 'utf8');
+let js = fs.readFileSync(path.join(dir, "main.js"), "utf8");
 const ts = `
   about_tag: { uz: "// 01 MEN HAQIMDA", en: "// 01 ABOUT", ru: "// 01 ОБО МНЕ" },
   skills_tag: { uz: "// 02 TEXNOLOGIYALAR", en: "// 02 SKILLS", ru: "// 02 НАВЫКИ" },
@@ -88,7 +108,7 @@ const ts = `
   certs_tag: { uz: "// 04 SERTIFIKATLAR", en: "// 04 CERTIFICATES", ru: "// 04 СЕРТИФИКАТЫ" },
   contact_tag: { uz: "// 05 BOG'LANISH", en: "// 05 CONTACT", ru: "// 05 КОНТАКТЫ" },
 `;
-js = js.replace(/const translations = \{/, 'const translations = {' + ts);
+js = js.replace(/const translations = \{/, "const translations = {" + ts);
 
 const partCode = `\n/* PARTICLE LOGO */
 const cvs = document.getElementById('hero-canvas');
@@ -177,4 +197,4 @@ if (cvs) {
 `;
 
 js += partCode;
-fs.writeFileSync(path.join(dir, 'main.js'), js);
+fs.writeFileSync(path.join(dir, "main.js"), js);
