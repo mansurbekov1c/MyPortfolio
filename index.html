@@ -25,11 +25,13 @@
         <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
       </ul>
       <div class="nav-controls">
-        <select id="lang-select" class="lang-select">
-          <option value="en">EN</option>
-          <option value="uz">UZ</option>
-          <option value="ru">RU</option>
-        </select>
+        <div id="lang-switch" class="lang-switch">
+          <span class="lang-btn active" data-lang="en">EN</span>
+          <span class="lang-sep">|</span>
+          <span class="lang-btn" data-lang="uz">UZ</span>
+          <span class="lang-sep">|</span>
+          <span class="lang-btn" data-lang="ru">RU</span>
+        </div>
         <button id="theme-btn" class="theme-btn" title="Toggle Theme">🌙</button>
       </div>
       <button class="burger" id="burger" onclick="toggleMenu()">
@@ -59,50 +61,8 @@
           <a href="cv.pdf" class="btn btn-s" download data-i18n="hero_btn_cv">Download CV</a>
         </div>
       </div>
-      <div
-        class="hero-right reveal"
-        style="display: flex; justify-content: center"
-      >
-        <div class="code-window">
-          <div class="code-header">
-            <div class="dot dot-r"></div>
-            <div class="dot dot-y"></div>
-            <div class="dot dot-g"></div>
-            <span class="code-fn">jorabek.js</span>
-          </div>
-          <div class="code-body">
-            <span class="cl"
-              ><span class="kw">const</span> <span class="fn">developer</span>
-              <span class="op">=</span> {</span
-            >
-            <span class="cl"> name: <span class="str">"Jo'rabek"</span>,</span>
-            <span class="cl">
-              role: <span class="str">"Frontend Dev"</span>,</span
-            >
-            <span class="cl">
-              location: <span class="str">"Xorazm, UZ"</span>,</span
-            >
-            <span class="cl">
-              skills: [<span class="str">"HTML"</span>,
-              <span class="str">"CSS"</span>,</span
-            >
-            <span class="cl">
-              <span class="str">"JavaScript"</span>,
-              <span class="str">"Git"</span>],</span
-            >
-            <span class="cl"> learning: <span class="str">"React"</span>,</span>
-            <span class="cl"> available: <span class="kw">true</span></span>
-            <span class="cl">};</span>
-            <span class="cl">&nbsp;</span>
-            <span class="cl cm">// Open to work! 🚀</span>
-            <span class="cl"
-              ><span class="fn">console</span>.<span class="fn">log</span>(<span
-                class="str"
-                >"Salom!"</span
-              >)<span class="cursor"></span
-            ></span>
-          </div>
-        </div>
+      <div class="hero-right reveal" style="display: flex; justify-content: center; align-items: center;">
+        <canvas id="hero-canvas" class="hero-canvas"></canvas>
       </div>
     </section>
 
@@ -125,22 +85,36 @@
               </p>
             </div>
           </div>
-          <div class="about-stats reveal">
-            <div class="stat-box">
-              <div class="stat-num">1+</div>
-              <div class="stat-label" data-i18n="stat_exp_label">Year experience</div>
+          <div class="about-stats-container">
+            <div class="about-stats reveal">
+              <div class="stat-box">
+                <div class="stat-num">1+</div>
+                <div class="stat-label" data-i18n="stat_exp_label">Year experience</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-num">5+</div>
+                <div class="stat-label" data-i18n="stat_proj_label">Projects</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-num">11</div>
+                <div class="stat-label" data-i18n="stat_cert_label">Certificates</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-num">∞</div>
+                <div class="stat-label" data-i18n="stat_learn_label">Desire to learn</div>
+              </div>
             </div>
-            <div class="stat-box">
-              <div class="stat-num">5+</div>
-              <div class="stat-label" data-i18n="stat_proj_label">Projects</div>
-            </div>
-            <div class="stat-box">
-              <div class="stat-num">11</div>
-              <div class="stat-label" data-i18n="stat_cert_label">Certificates</div>
-            </div>
-            <div class="stat-box">
-              <div class="stat-num">∞</div>
-              <div class="stat-label" data-i18n="stat_learn_label">Desire to learn</div>
+            
+            <div class="about-card reveal">
+              <div class="ac-hdr" data-i18n="about_dev_info">Developer Info</div>
+              <div class="ac-body">
+                <div class="ac-row"><span class="ac-label" data-i18n="info_name">Name:</span> <span class="ac-val">Jo'rabek</span></div>
+                <div class="ac-row"><span class="ac-label" data-i18n="info_role">Role:</span> <span class="ac-val" data-i18n="info_role_val">Frontend Dev</span></div>
+                <div class="ac-row"><span class="ac-label" data-i18n="info_location">Location:</span> <span class="ac-val" data-i18n="info_loc_val">Xorazm, UZ</span></div>
+                <div class="ac-row"><span class="ac-label" data-i18n="info_skills">Skills:</span> <span class="ac-val">HTML, CSS, JS, Git</span></div>
+                <div class="ac-row"><span class="ac-label" data-i18n="info_learning">Learning:</span> <span class="ac-val">React</span></div>
+                <div class="ac-row"><span class="ac-label" data-i18n="info_status">Status:</span> <span class="ac-badge" data-i18n="info_available">Open to work 🚀</span></div>
+              </div>
             </div>
           </div>
         </div>

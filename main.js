@@ -114,6 +114,21 @@ if(themeBtn) {
 
 /* LANGUAGE TRANSLATIONS */
 const translations = {
+  about_tag: { uz: "// 01 MEN HAQIMDA", en: "// 01 ABOUT", ru: "// 01 ОБО МНЕ" },
+  skills_tag: { uz: "// 02 TEXNOLOGIYALAR", en: "// 02 SKILLS", ru: "// 02 НАВЫКИ" },
+  projects_tag: { uz: "// 03 LOYIHALAR", en: "// 03 PROJECTS", ru: "// 03 ПРОЕКТЫ" },
+  certs_tag: { uz: "// 04 SERTIFIKATLAR", en: "// 04 CERTIFICATES", ru: "// 04 СЕРТИФИКАТЫ" },
+  contact_tag: { uz: "// 05 BOG'LANISH", en: "// 05 CONTACT", ru: "// 05 КОНТАКТЫ" },
+  about_dev_info: { uz: "Dasturchi haqida", en: "Developer Info", ru: "Инфо разработчика" },
+  info_name: { uz: "Ism:", en: "Name:", ru: "Имя:" },
+  info_role: { uz: "Kasb:", en: "Role:", ru: "Роль:" },
+  info_role_val: { uz: "Frontend Dasturchi", en: "Frontend Dev", ru: "Frontend Разраб" },
+  info_location: { uz: "Manzil:", en: "Location:", ru: "Локация:" },
+  info_loc_val: { uz: "Xorazm, O'zbekiston", en: "Xorazm, UZ", ru: "Хорезм, УЗ" },
+  info_skills: { uz: "Texnologiyalar:", en: "Skills:", ru: "Навыки:" },
+  info_learning: { uz: "O'rganmoqda:", en: "Learning:", ru: "Изучает:" },
+  info_status: { uz: "Holat:", en: "Status:", ru: "Статус:" },
+  info_available: { uz: "Ishga tayyor 🚀", en: "Open to work 🚀", ru: "Открыт к работе 🚀" },
   nav_home: { uz: "Home", en: "Home", ru: "Главная" },
   nav_about: { uz: "About", en: "About", ru: "Обо мне" },
   nav_skills: { uz: "Skills", en: "Skills", ru: "Навыки" },
@@ -196,11 +211,18 @@ const translations = {
   footer_copy: { uz: "© 2025 Jo'rabek Abdullayev. Barcha huquqlar himoyalangan.", en: "© 2025 Jo'rabek Abdullayev. All rights reserved.", ru: "© 2025 Джорабек Абдуллаев. Все права защищены." }
 };
 
-const langSelect = document.getElementById("lang-select");
+const langBtns = document.querySelectorAll(".lang-btn");
 function setLanguage(lang) {
   document.documentElement.lang = lang;
   localStorage.setItem("lang", lang);
-  if(langSelect) langSelect.value = lang;
+  
+  langBtns.forEach(btn => {
+    if (btn.getAttribute("data-lang") === lang) {
+      btn.classList.add("active");
+    } else {
+      btn.classList.remove("active");
+    }
+  });
   
   document.querySelectorAll("[data-i18n]").forEach(el => {
     const key = el.getAttribute("data-i18n");
@@ -219,12 +241,148 @@ function setLanguage(lang) {
 
 // Initial language load
 const currentLang = localStorage.getItem("lang") || "en";
-// Only run translation if DOM is fully loaded or ready 
-// Since script is at bottom of body, we can just run it
 setLanguage(currentLang);
 
-if(langSelect) {
-  langSelect.addEventListener("change", (e) => {
-    setLanguage(e.target.value);
+langBtns.forEach(btn => {
+  btn.addEventListener("click", (e) => {
+    setLanguage(e.target.getAttribute("data-lang"));
   });
+});
+
+/* PARTICLE LOGO */
+const cvs = document.getElementById('hero-canvas');
+if (cvs) {
+  const ctx = cvs.getContext('2d');
+  
+  function initCvs() {
+    cvs.width = cvs.offsetWidth;
+    cvs.height = cvs.offsetHeight;
+  }
+  initCvs();
+  window.addEventListener('resize', initCvs);
+  
+  let particles = [];
+  const cols = 28;
+  const rows = 28;
+  const spacing = 18;
+  const offsetX = (cols-1) * spacing / 2;
+  const offsetZ = (rows-1) * spacing / 2;
+  
+  for(let i=0; i<rows; i++) {
+    for(let j=0; j<cols; j++) {
+      let x = j * spacing - offsetX;
+      let z = i * spacing - offsetZ;
+      particles.push({
+        basex: x, basey: 0, basez: z, 
+        x: (Math.random()-0.5) * 800,
+        y: (Math.random()-0.5) * 800 + 400,
+        vx: 0, vy: 0,
+        size: 1.5
+      });
+    }
+  }
+
+  let mx=-1000, my=-1000;
+  let targetRotX = 0, targetRotY = 0;
+  let currRotX = 0, currRotY = 0;
+  
+  cvs.addEventListener('mousemove', e => {
+    const rect = cvs.getBoundingClientRect();
+    mx = e.clientX - rect.left - cvs.width/2;
+    my = e.clientY - rect.top - cvs.height/2;
+    // Normalized mouse [-1, 1] mapped to rotation
+    targetRotY = (mx / (cvs.width/2)) * Math.PI;
+    targetRotX = (my / (cvs.height/2)) * Math.PI;
+  });
+  cvs.addEventListener('mouseleave', () => { 
+    mx=-1000; my=-1000; 
+    targetRotX = 0; targetRotY = 0;
+  });
+
+  let time=0;
+  function drawParticles() {
+    ctx.clearRect(0,0,cvs.width,cvs.height);
+    const accent = getComputedStyle(document.body).getPropertyValue('--accent').trim() || '#fafafa';
+    ctx.fillStyle = accent;
+    ctx.strokeStyle = accent;
+    
+    ctx.save();
+    ctx.translate(cvs.width/2, cvs.height/2);
+    
+    // Auto-spin base
+    time += 0.003;
+    
+    // Smoothly interpolate current rotation to mouse rotation
+    currRotX += (targetRotX - currRotX) * 0.05;
+    currRotY += (targetRotY - currRotY) * 0.05;
+    
+    // Combined rotation angles
+    // Look down slightly to view the wave topology
+    let angleX = currRotX + 0.5;
+    let angleY = time + currRotY;
+    
+    let cosX = Math.cos(angleX), sinX = Math.sin(angleX);
+    let cosY = Math.cos(angleY), sinY = Math.sin(angleY);
+    
+    for(let i=0; i<particles.length; i++) {
+      let p = particles[i];
+      let dx = mx - p.x;
+      let dy = my - p.y;
+      let dist = Math.sqrt(dx*dx+dy*dy);
+      
+      // Wave physics calculating elevation (y)
+      let waveY = Math.sin(time*2 + p.basex*0.01 + p.basez*0.015) * 35 + Math.cos(time*1.5 + p.basex*0.02) * 15;
+      
+      // 1. Rotate around Y axis
+      let rx1 = p.basex * cosY - p.basez * sinY;
+      let rz1 = p.basex * sinY + p.basez * cosY;
+      let ry1 = waveY;
+      
+      // 2. Rotate around X axis
+      let ry2 = ry1 * cosX - rz1 * sinX;
+      let rz2 = ry1 * sinX + rz1 * cosX;
+      let rx2 = rx1;
+      
+      let depth = rz2;
+      let scale = 350 / (350 + depth);
+      
+      let targetX = rx2 * scale;
+      let targetY = ry2 * scale;
+      
+      // Liquid Ripple from mouse
+      if(dist < 100) {
+        let force = (100 - dist) / 100;
+        let repelX = (dx/dist) * force * 5;
+        let repelY = (dy/dist) * force * 5;
+        p.vx -= repelX;
+        p.vy -= repelY;
+      }
+      
+      // Soft spring back for liquid field
+      p.vx += (targetX - p.x) * 0.035;
+      p.vy += (targetY - p.y) * 0.035;
+      p.vx *= 0.84;
+      p.vy *= 0.84;
+      
+      if (Number.isNaN(p.vx)) p.vx = 0;
+      if (Number.isNaN(p.vy)) p.vy = 0;
+      p.x += p.vx; p.y += p.vy;
+      
+      let renderSize = Math.max(0.1, p.size * scale);
+      
+      let depthAlpha = (depth + 300) / 450;
+      if (depthAlpha > 1) depthAlpha = 1;
+      if (depthAlpha < 0.1) depthAlpha = 0.1;
+
+      ctx.globalAlpha = depthAlpha;      
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, renderSize, 0, Math.PI*2);
+      ctx.fill();
+    }
+    ctx.globalAlpha = 1;
+
+    ctx.restore();
+    requestAnimationFrame(drawParticles);
+  }
+  drawParticles();
 }
