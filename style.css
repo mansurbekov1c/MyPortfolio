@@ -34,18 +34,18 @@ body {
   --grad5: transparent;
 }
 body.light-mode {
-  --bg: #f3f0eb;
-  --bg2: #e8e4db;
-  --card: #faf8f5;
-  --border: #dcd6cb;
-  --accent: #1e1e1e;
-  --accent-dim: rgba(30, 30, 30, 0.05);
-  --text: #3d3b38;
-  --muted: #736f68;
-  --white: #121212;
-  --nav-bg: rgba(243, 240, 235, 0.85);
-  --menu-bg: #f3f0eb;
-  --code-hdr: rgba(255, 255, 255, 0.5);
+  --bg: #f6f3ef;
+  --bg2: #edeae4;
+  --card: #ffffff;
+  --border: #b8b0a6;
+  --accent: #0d0c0b;
+  --accent-dim: rgba(13, 12, 11, 0.08);
+  --text: #111110;
+  --muted: #3d3a36;
+  --white: #050505;
+  --nav-bg: rgba(246, 243, 239, 0.95);
+  --menu-bg: #f6f3ef;
+  --code-hdr: rgba(255, 255, 255, 0.8);
   --grad1: transparent;
   --grad2: transparent;
   --grad3: transparent;
@@ -151,18 +151,26 @@ body.light-mode {
 .theme-btn {
   background: var(--card);
   border: 1px solid var(--border);
-  color: var(--text);
+  color: var(--accent);
   font-size: 0.95rem;
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   display: grid;
   place-items: center;
   cursor: pointer;
   transition: all 0.2s;
+  line-height: 0;
+}
+.theme-btn svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  flex-shrink: 0;
 }
 .theme-btn:hover {
   border-color: var(--accent);
+  background: var(--accent-dim);
   transform: translateY(-2px);
 }
 

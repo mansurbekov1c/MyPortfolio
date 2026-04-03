@@ -96,19 +96,29 @@ async function sendForm() {
 
 /* THEME TOGGLE */
 const themeBtn = document.getElementById("theme-btn");
+const iconMoon = document.getElementById("icon-moon");
+const iconSun = document.getElementById("icon-sun");
+
+function applyThemeIcons(isLight) {
+  if (iconMoon && iconSun) {
+    iconMoon.style.display = isLight ? "none" : "block";
+    iconSun.style.display = isLight ? "block" : "none";
+  }
+}
+
 const currentTheme = localStorage.getItem("theme");
 if (currentTheme === "light") {
   document.body.classList.add("light-mode");
-  if (themeBtn) themeBtn.textContent = "☀️";
+  applyThemeIcons(true);
 } else {
-  if (themeBtn) themeBtn.textContent = "🌙";
+  applyThemeIcons(false);
 }
 if (themeBtn) {
   themeBtn.addEventListener("click", () => {
     document.body.classList.toggle("light-mode");
     const isLight = document.body.classList.contains("light-mode");
     localStorage.setItem("theme", isLight ? "light" : "dark");
-    themeBtn.textContent = isLight ? "☀️" : "🌙";
+    applyThemeIcons(isLight);
   });
 }
 
@@ -240,6 +250,8 @@ const translations = {
   },
   skills_group_2: { uz: "O'rganayotganlar", en: "Learning", ru: "Изучаю" },
   skills_group_3: { uz: "Asboblar", en: "Tools", ru: "Инструменты" },
+  skills_group_4: { uz: "IT va Tarmoq", en: "IT & Networking", ru: "IT и Сети" },
+  skills_group_5: { uz: "UX Dizayn", en: "UX Design", ru: "UX Дизайн" },
 
   projects_tag: {
     uz: "// projects.all",
@@ -435,6 +447,7 @@ if (cvs) {
       "#fafafa";
     ctx.fillStyle = accent;
     ctx.strokeStyle = accent;
+    const baseOpacity = 1;
 
     ctx.save();
     ctx.translate(cvs.width / 2, cvs.height / 2);
@@ -509,7 +522,7 @@ if (cvs) {
       if (depthAlpha > 1) depthAlpha = 1;
       if (depthAlpha < 0.1) depthAlpha = 0.1;
 
-      ctx.globalAlpha = depthAlpha;
+      ctx.globalAlpha = depthAlpha * baseOpacity;
       ctx.beginPath();
       ctx.arc(p.x, p.y, renderSize, 0, Math.PI * 2);
       ctx.fill();
