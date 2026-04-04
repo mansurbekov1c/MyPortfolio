@@ -286,6 +286,11 @@ const translations = {
     en: "Design project exploring creative UI composition and visual aesthetics.",
     ru: "Дизайн-проект, исследующий креативную UI композицию и визуальную эстетику.",
   },
+  proj_desc_6: {
+    uz: "Sof CSS va JavaScript animatsiyalari bilan yaratilgan interaktiv suyuq shisha (glassmorphism) effekti.",
+    en: "Interactive liquid glass morphism UI effect built with pure CSS and JavaScript animations.",
+    ru: "Интерактивный эффект жидкого стекла (glassmorphism), созданный с помощью чистого CSS и JavaScript анимаций.",
+  },
 
   certs_tag: {
     uz: "// certificates",

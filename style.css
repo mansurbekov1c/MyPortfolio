@@ -32,6 +32,7 @@ body {
   --grad3: transparent;
   --grad4: transparent;
   --grad5: transparent;
+  --grad6: transparent;
 }
 body.light-mode {
   --bg: #f6f3ef;
@@ -51,6 +52,7 @@ body.light-mode {
   --grad3: transparent;
   --grad4: transparent;
   --grad5: transparent;
+  --grad6: transparent;
 }
 ::-webkit-scrollbar {
   width: 6px;
