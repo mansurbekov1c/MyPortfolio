@@ -12,6 +12,15 @@ function closeMenu() {
 const allSections = document.querySelectorAll("section,[id]");
 const navAs = document.querySelectorAll(".nav-links a");
 window.addEventListener("scroll", () => {
+  const navbar = document.getElementById("navbar");
+  if (navbar) {
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  }
+
   let cur = "";
   allSections.forEach((s) => {
     if (s.id && window.scrollY >= s.offsetTop - 100) cur = s.id;
@@ -207,20 +216,10 @@ const translations = {
   about_tag: { uz: "// about.me", en: "// about.me", ru: "// обо_мне" },
   about_title_1: { uz: "Men ", en: "About ", ru: "Обо " },
   about_title_2: { uz: "haqimda", en: "me", ru: "мне" },
-  about_p1: {
-    uz: "Men <strong>Xorazmda</strong> yashovchi frontend dasturchiman. <strong>1 yildan</strong> beri HTML, CSS va JavaScript o'rganaman va har kuni yangi narsalar kashf etaman.",
-    en: "I am a frontend developer based in <strong>Xorazm</strong>. I have been learning HTML, CSS, and JavaScript for <strong>1 year</strong>, discovering new things every day.",
-    ru: "Я фронтенд-разработчик из <strong>Хорезма</strong>. Изучаю HTML, CSS и JavaScript уже <strong>1 год</strong> и каждый день открываю для себя что-то новое.",
-  },
-  about_p2: {
-    uz: "Asosan <strong>landing page</strong> va ko'p sahifali saytlar yasayman. Hozir <strong>React</strong> o'rganishni boshladim va kelajakda full-stack dasturchi bo'lishni maqsad qilganman.",
-    en: "I mostly build <strong>landing pages</strong> and multi-page websites. I recently started learning <strong>React</strong> and aim to become a full-stack developer in the future.",
-    ru: "В основном я создаю <strong>лендинги</strong> и многостраничные сайты. Недавно начал изучать <strong>React</strong> и в будущем планирую стать full-stack разработчиком.",
-  },
-  about_p3: {
-    uz: "Al-Xorazmiy Vorislari dasturida ta'lim olaman va Coursera orqali <strong>Google sertifikatlarini</strong> muvaffaqiyatli tugatganman.",
-    en: "I study in the 'Heirs of Al-Khwarizmi' program and have successfully completed <strong>Google certificates</strong> via Coursera.",
-    ru: "Обучаюсь по программе 'Наследники Аль-Хорезми' и успешно завершил <strong>сертификации Google</strong> на Coursera.",
+  about_text: {
+    uz: "Men O'zbekiston, Xorazmdan frontend dasturchiman. Veb-dasturlashni 14 yoshimdan boshlaganman va shundan beri amaliy loyihalar yaratib kelmoqdaman. O'tgan bir yil davomida noldan boshlab landing page va ko'p sahifali saytlar yaratdim — faqat darslik ko'rib emas, balki amalda o'rganib. Hozirda React-ga chuqur sho'ng'iganman va full-stack dasturchi bo'lishni maqsad qilganman. Men toza, o'qilishi oson kod yozaman va unumdorlik bilan birga vizual sifatga ham ahamiyat beraman.",
+    en: "I'm a frontend developer from Xorazm, Uzbekistan. I started web development at 14 and have been building real projects ever since. Over the past year, I've built landing pages and multi-page websites from scratch — learning by doing, not just watching tutorials. Currently diving into React and aiming to become a full-stack developer. I write clean, readable code and care about both performance and visual quality.",
+    ru: "Я фронтенд-разработчик из Хорезма, Узбекистан. Начал заниматься веб-разработкой в 14 лет и с тех пор создаю реальные проекты. За последний год я создал лендинги и многостраничные сайты с нуля — обучаясь на практике, а не просто по туториалам. Сейчас углубленно изучаю React и стремлюсь стать full-stack разработчиком. Пишу чистый и читаемый код, забочусь как о производительности, так и о визуальном качестве.",
   },
 
   stat_exp_label: { uz: "Yil tajriba", en: "Year experience", ru: "Год опыта" },
@@ -243,15 +242,16 @@ const translations = {
   },
   skills_title_1: { uz: "Ko'nik", en: "My ", ru: "Мои " },
   skills_title_2: { uz: "malarim", en: "Skills", ru: "навыки" },
-  skills_group_1: {
-    uz: "Asosiy texnologiyalar",
-    en: "Core Technologies",
-    ru: "Основные технологии",
+  skills_g1: {
+    uz: "Frontend Ko'nikmalari",
+    en: "Frontend Skills",
+    ru: "Фронтенд Навыки",
   },
-  skills_group_2: { uz: "O'rganayotganlar", en: "Learning", ru: "Изучаю" },
-  skills_group_3: { uz: "Asboblar", en: "Tools", ru: "Инструменты" },
-  skills_group_4: { uz: "IT va Tarmoq", en: "IT & Networking", ru: "IT и Сети" },
-  skills_group_5: { uz: "UX Dizayn", en: "UX Design", ru: "UX Дизайн" },
+  skills_g2: {
+    uz: "Qo'shimcha Bilimlar",
+    en: "Additional Knowledge",
+    ru: "Дополнительные Знания",
+  },
 
   projects_tag: {
     uz: "// projects.all",
@@ -342,9 +342,9 @@ const translations = {
   },
 
   footer_copy: {
-    uz: "© 2025 Jo'rabek Abdullayev. Barcha huquqlar himoyalangan.",
-    en: "© 2025 Jo'rabek Abdullayev. All rights reserved.",
-    ru: "© 2025 Джорабек Абдуллаев. Все права защищены.",
+    uz: `© ${new Date().getFullYear()} Jo'rabek Abdullayev. Barcha huquqlar himoyalangan.`,
+    en: `© ${new Date().getFullYear()} Jo'rabek Abdullayev. All rights reserved.`,
+    ru: `© ${new Date().getFullYear()} Джорабек Абдуллаев. Все права защищены.`,
   },
 };
 
