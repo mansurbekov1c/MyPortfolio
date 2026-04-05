@@ -158,17 +158,19 @@ body.light-mode {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
   cursor: pointer;
   transition: all 0.2s;
-  line-height: 0;
 }
 .theme-btn svg {
   width: 16px;
   height: 16px;
   stroke: currentColor;
   flex-shrink: 0;
+  display: block;
 }
 .theme-btn:hover {
   border-color: var(--accent);
@@ -846,6 +848,16 @@ footer {
   #navbar {
     padding: 0 32px;
   }
+  .nav-links {
+    display: none;
+  }
+  .burger {
+    display: flex;
+  }
+  .nav-controls {
+    margin-right: 14px;
+    gap: 12px;
+  }
   #home {
     grid-template-columns: 1fr;
     padding: 120px 32px 80px;
@@ -869,12 +881,6 @@ footer {
 @media (max-width: 768px) {
   #navbar {
     padding: 0 20px;
-  }
-  .nav-links {
-    display: none;
-  }
-  .burger {
-    display: flex;
   }
   .nav-controls {
     margin-right: 14px;
