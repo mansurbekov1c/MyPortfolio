@@ -573,23 +573,57 @@ body.light-mode {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   gap: 10px;
   text-decoration: none;
   border-bottom: 1px solid var(--border);
   transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  padding: 14px;
 }
-.project-thumb .p-emoji {
-  font-size: 3rem;
+.project-thumb::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.05) 0%,
+    rgba(0, 0, 0, 0.55) 65%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+  pointer-events: none;
+  opacity: 0.95;
+}
+.project-thumb-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.02);
+  filter: saturate(1.05) contrast(1.05);
 }
 .project-thumb .p-url {
   font-family: "Fira Code", monospace;
   font-size: 0.72rem;
   color: var(--accent);
   opacity: 0.8;
+  position: relative;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 6px 10px;
+  border-radius: 999px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 .project-card:hover .project-thumb {
   background: var(--accent-dim);
+}
+.project-card:hover .project-thumb-img {
+  transform: scale(1.06);
+  transition: transform 0.35s ease;
 }
 .project-body {
   padding: 22px 24px 26px;
@@ -671,24 +705,33 @@ body.light-mode {
 }
 .cert-card {
   display: flex;
-  align-items: flex-start;
-  gap: 14px;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 12px;
-  padding: 18px 20px;
+  padding: 14px;
   text-decoration: none;
   color: var(--text);
   transition: all 0.25s;
 }
 .cert-card:hover {
   border-color: var(--accent);
-  transform: translateX(5px);
+  transform: translateY(-4px);
 }
-.cert-ico {
-  font-size: 1.5rem;
+.cert-thumb {
+  width: 100%;
+  height: 140px;
+  border-radius: 12px;
   flex-shrink: 0;
-  margin-top: 2px;
+  object-fit: contain;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: #ffffff;
+  padding: 6px;
+}
+.cert-meta {
+  padding: 2px 4px 4px;
 }
 .cert-title {
   font-size: 0.88rem;
