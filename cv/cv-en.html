@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jo'rabek Abdullayev — CV (EN)</title>
+    <style>
+      :root {
+        --bg: #0a0a0a;
+        --paper: #ffffff;
+        --ink: #0f172a;
+        --muted: #475569;
+        --left: #0b0b0f;
+        --accent: #60a5fa;
+        --chip: #1f2430;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+          Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        background: #0b0b0f;
+        color: var(--ink);
+      }
+      .page-wrap {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 24px 16px;
+      }
+      .toolbar {
+        width: min(980px, 100%);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        color: #e5e7eb;
+        margin-bottom: 12px;
+      }
+      .toolbar a {
+        color: #e5e7eb;
+        text-decoration: none;
+        opacity: 0.9;
+      }
+      .toolbar a:hover {
+        opacity: 1;
+      }
+      .btn {
+        appearance: none;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        background: rgba(255, 255, 255, 0.08);
+        color: #fff;
+        border-radius: 12px;
+        padding: 10px 14px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      .btn:hover {
+        background: rgba(255, 255, 255, 0.12);
+      }
+
+      /* A4 container - 210mm × 297mm */
+      .sheet {
+        width: 210mm;
+        height: 297mm;
+        background: var(--paper);
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.55);
+        overflow: hidden;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 280px 1fr;
+        height: 100%;
+      }
+      .left {
+        background: var(--left);
+        color: #fff;
+        padding: 48px 32px;
+        display: flex;
+        flex-direction: column;
+      }
+      .name {
+        font-size: 28px;
+        font-weight: 800;
+        line-height: 1.15;
+        margin: 0 0 10px;
+        letter-spacing: -0.02em;
+      }
+      .rule {
+        width: 48px;
+        height: 2px;
+        background: var(--accent);
+        border-radius: 999px;
+        margin-bottom: 10px;
+      }
+      .role {
+        color: var(--accent);
+        font-size: 13px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin: 0 0 28px;
+      }
+      .section-h {
+        margin: 0 0 12px;
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        color: rgba(255, 255, 255, 0.55);
+        font-weight: 800;
+      }
+      .contact {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 26px;
+      }
+      .row {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+        font-size: 12px;
+        line-height: 1.45;
+      }
+      .ico {
+        width: 16px;
+        height: 16px;
+        flex: 0 0 auto;
+        margin-top: 2px;
+        color: var(--accent);
+        opacity: 0.95;
+      }
+      .contact a {
+        color: #fff;
+        text-decoration: none;
+        border-bottom: 1px dashed rgba(255, 255, 255, 0.25);
+      }
+      .contact a:hover {
+        border-bottom-color: rgba(255, 255, 255, 0.55);
+      }
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-bottom: 26px;
+      }
+      .chip {
+        font-size: 11px;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        padding: 6px 9px;
+        border-radius: 10px;
+      }
+      .langs {
+        margin-top: 4px;
+        display: grid;
+        gap: 10px;
+      }
+      .lang {
+        font-size: 12px;
+        font-weight: 650;
+      }
+      .lang-sub {
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.55);
+        margin-top: 2px;
+      }
+
+      .right {
+        padding: 48px 40px;
+      }
+      .r-h {
+        margin: 0 0 10px;
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        color: #64748b;
+        font-weight: 800;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #e2e8f0;
+      }
+      .p {
+        margin: 0;
+        font-size: 13px;
+        line-height: 1.7;
+        color: #334155;
+      }
+      .block {
+        margin-bottom: 22px;
+      }
+      .split {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        align-items: flex-start;
+        margin: 0 0 8px;
+      }
+      .title {
+        margin: 0;
+        font-size: 14px;
+        font-weight: 800;
+        color: #0f172a;
+      }
+      .date {
+        font-size: 12px;
+        color: #64748b;
+        white-space: nowrap;
+      }
+      .bullets {
+        margin: 0;
+        padding-left: 18px;
+        display: grid;
+        gap: 6px;
+      }
+      .bullets li {
+        font-size: 13px;
+        color: #334155;
+        line-height: 1.7;
+      }
+      .projects {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px 24px;
+      }
+      .proj h4 {
+        margin: 0 0 4px;
+        font-size: 13px;
+        font-weight: 800;
+        color: #0f172a;
+      }
+      .proj p {
+        margin: 0;
+        font-size: 12px;
+        color: #475569;
+        line-height: 1.6;
+      }
+
+      @media (max-width: 900px) {
+        .sheet {
+          width: 100%;
+          height: auto;
+        }
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+        .page-wrap {
+          padding: 0;
+        }
+        .toolbar {
+          display: none;
+        }
+        .sheet {
+          box-shadow: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-wrap">
+      <div class="toolbar">
+        <a href="../index.html">← Back to portfolio</a>
+        <button class="btn" onclick="window.print()">Download PDF</button>
+      </div>
+
+      <main class="sheet">
+        <div class="grid">
+          <aside class="left">
+            <h1 class="name">Jo'rabek<br />Abdullayev</h1>
+            <div class="rule"></div>
+            <p class="role">Frontend Developer</p>
+
+            <h3 class="section-h">Contact</h3>
+            <div class="contact">
+              <div class="row">
+                <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 3 5.18 2 2 0 0 1 5.11 3h3a2 2 0 0 1 2 1.72c.12.86.31 1.7.57 2.5a2 2 0 0 1-.45 2.11L9.91 10.09a16 16 0 0 0 4 4l.76-.76a2 2 0 0 1 2.11-.45c.8.26 1.64.45 2.5.57A2 2 0 0 1 22 16.92Z"/>
+                </svg>
+                <a href="tel:+998994572386">+998 99 457 23 86</a>
+              </div>
+              <div class="row">
+                <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16v16H4z" opacity=".15"></path>
+                  <path d="M4 8l8 5 8-5"></path>
+                  <path d="M4 6h16"></path>
+                </svg>
+                <a href="mailto:abdullayevjorabek1pc@gmail.com">abdullayevjorabek1pc@gmail.com</a>
+              </div>
+              <div class="row">
+                <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 19c-4 1-4-2-6-2"></path>
+                  <path d="M15 22v-3.1a2.7 2.7 0 0 0-.75-2.1c2.5-.3 5.15-1.25 5.15-5.6A4.4 4.4 0 0 0 18 8.1 4.1 4.1 0 0 0 17.9 5S17 4.7 15 6.1a13.4 13.4 0 0 0-6 0C7 4.7 6.1 5 6.1 5A4.1 4.1 0 0 0 6 8.1a4.4 4.4 0 0 0-1.4 3.1c0 4.35 2.65 5.3 5.15 5.6A2.7 2.7 0 0 0 9 18.9V22"></path>
+                </svg>
+                <a href="https://github.com/mansurbekov1c" target="_blank" rel="noopener">github.com/mansurbekov1c</a>
+              </div>
+              <div class="row">
+                <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 5L2 12l7 2 2 7 10-16Z"></path>
+                  <path d="M9 14l12-9"></path>
+                </svg>
+                <a href="https://t.me/mansurbekov11c" target="_blank" rel="noopener">t.me/mansurbekov11c</a>
+              </div>
+              <div class="row">
+                <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M2 12h20"></path>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10Z"></path>
+                </svg>
+                <a href="https://mansurbekovich.uz" target="_blank" rel="noopener">mansurbekovich.uz</a>
+              </div>
+              <div class="row">
+                <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 21s-6-4.4-6-10a6 6 0 1 1 12 0c0 5.6-6 10-6 10Z"></path>
+                  <circle cx="12" cy="11" r="2.5"></circle>
+                </svg>
+                <span>Uzbekistan</span>
+              </div>
+            </div>
+
+            <h3 class="section-h">Technical Skills</h3>
+            <div class="chips">
+              <span class="chip">HTML5</span>
+              <span class="chip">CSS3</span>
+              <span class="chip">JavaScript (ES6+)</span>
+              <span class="chip">Tailwind CSS</span>
+              <span class="chip">SCSS</span>
+              <span class="chip">Git</span>
+              <span class="chip">GitHub</span>
+              <span class="chip">Figma</span>
+              <span class="chip">Responsive Design</span>
+              <span class="chip">UI Implementation</span>
+              <span class="chip">React (Learning)</span>
+            </div>
+
+            <h3 class="section-h">Languages</h3>
+            <div class="langs">
+              <div>
+                <div class="lang">Uzbek</div>
+                <div class="lang-sub">Native</div>
+              </div>
+              <div>
+                <div class="lang">English</div>
+                <div class="lang-sub">Basic / Intermediate</div>
+              </div>
+            </div>
+          </aside>
+
+          <section class="right">
+            <div class="block">
+              <h2 class="r-h">Professional Summary</h2>
+              <p class="p">
+                Motivated Frontend Developer with practical experience building responsive
+                websites, landing pages, and modern user interfaces. Skilled in HTML, CSS,
+                JavaScript, Tailwind CSS, SCSS, Git, GitHub, and Figma. Focused on clean,
+                user-friendly, visually polished web experiences. Currently improving React
+                skills and expanding real-world frontend experience through personal projects.
+              </p>
+            </div>
+
+            <div class="block">
+              <h2 class="r-h">Project Experience</h2>
+              <div class="split">
+                <h3 class="title">Personal Frontend Projects</h3>
+                <div class="date">2024 – Present</div>
+              </div>
+              <ul class="bullets">
+                <li>Built multiple responsive landing pages and multi-page websites from scratch</li>
+                <li>Developed modern UI layouts with clean structure and responsive design</li>
+                <li>Improved workflow through hands-on practice and iterative project development</li>
+                <li>Used Git and GitHub for version control and project organization</li>
+              </ul>
+            </div>
+
+            <div class="block">
+              <h2 class="r-h">Selected Projects</h2>
+              <div class="projects">
+                <div class="proj">
+                  <h4>Boldo</h4>
+                  <p>Multi-page business website with responsive layout and clean section structure</p>
+                </div>
+                <div class="proj">
+                  <h4>Monito</h4>
+                  <p>Modern pet store interface with product-focused responsive design</p>
+                </div>
+                <div class="proj">
+                  <h4>Liquid Glass</h4>
+                  <p>Interactive frontend concept with glassmorphism-style UI and effects</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="block" style="margin-bottom: 0">
+              <h2 class="r-h">Education</h2>
+              <div class="split">
+                <h3 class="title">Frontend Development</h3>
+                <div class="date">2024 – Present</div>
+              </div>
+              <p class="p" style="margin-bottom: 10px; color: #475569; font-size: 12px">
+                Self-learning & project practice
+              </p>
+              <ul class="bullets">
+                <li>Continuously improving frontend skills through practical development</li>
+                <li>Currently learning React and modern frontend workflow</li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
+

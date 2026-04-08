@@ -374,6 +374,16 @@ function setLanguage(lang) {
       el.setAttribute("placeholder", translations[key][lang]);
     }
   });
+
+  const cvLink = document.getElementById("cv-link");
+  if (cvLink) {
+    const cvByLang = {
+      en: "cv/cv-en.html",
+      uz: "cv/cv-uz.html",
+      ru: "cv/cv-ru.html",
+    };
+    cvLink.setAttribute("href", cvByLang[lang] || cvByLang.en);
+  }
 }
 
 // Initial language load
