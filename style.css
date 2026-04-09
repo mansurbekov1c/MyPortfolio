@@ -106,7 +106,7 @@ body.light-mode {
   list-style: none;
 }
 .nav-links a {
-  color: var(--muted);
+  color: var(--text);
   text-decoration: none;
   padding: 8px 16px;
   border-radius: 8px;
@@ -228,13 +228,36 @@ body.light-mode {
   display: flex;
 }
 .mobile-menu a {
-  color: var(--muted);
+  color: var(--text);
   text-decoration: none;
   padding: 12px 16px;
   border-radius: 8px;
   font-size: 0.95rem;
   font-weight: 500;
   transition: all 0.2s;
+}
+
+.skip-link {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2000;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: var(--accent);
+  color: var(--bg);
+  text-decoration: none;
+  font-weight: 700;
+  transform: translateY(-150%);
+  transition: transform 0.2s ease;
+}
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
 }
 .mobile-menu a:hover {
   color: var(--white);
@@ -538,7 +561,23 @@ body.light-mode {
   transform: translateY(-2px);
 }
 .s-icon {
-  font-size: 1.2rem;
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  flex: 0 0 20px;
+}
+.s-icon svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 .s-name {
   font-size: 0.88rem;
@@ -791,8 +830,18 @@ body.light-mode {
   border: 1px solid rgba(249, 115, 22, 0.2);
   display: grid;
   place-items: center;
-  font-size: 1.1rem;
+  color: var(--accent);
   flex-shrink: 0;
+}
+.c-icon svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 .c-type {
   font-size: 0.72rem;
@@ -888,8 +937,18 @@ footer {
   display: grid;
   place-items: center;
   text-decoration: none;
-  font-size: 1rem;
+  color: var(--accent);
   transition: all 0.2s;
+}
+.social-btn svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 .social-btn:hover {
   border-color: var(--accent);
