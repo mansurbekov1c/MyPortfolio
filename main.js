@@ -291,6 +291,11 @@ const translations = {
     en: "Interactive liquid glass morphism UI effect built with pure CSS and JavaScript animations.",
     ru: "Интерактивный эффект жидкого стекла (glassmorphism), созданный с помощью чистого CSS и JavaScript анимаций.",
   },
+  proj_desc_7: {
+    uz: "O'zbekiston uchun aqlli navbat boshqaruvi mobil ilovasi. Mijoz va admin rollari, real vaqtda navbat holati, Supabase backend bilan ishlaydi.",
+    en: "Smart queue management mobile app for Uzbekistan. Customer and admin roles, real-time queue status, powered by a Supabase backend.",
+    ru: "Мобильное приложение для умного управления очередями в Узбекистане. Роли клиента и администратора, статус очереди в реальном времени на базе Supabase.",
+  },
 
   certs_tag: {
     uz: "// certificates",

@@ -657,6 +657,11 @@ body.light-mode {
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
+.project-thumb-mobile .project-thumb-img {
+  object-fit: contain;
+  object-position: center top;
+  padding: 0;
+}
 .project-card:hover .project-thumb {
   background: var(--accent-dim);
 }
