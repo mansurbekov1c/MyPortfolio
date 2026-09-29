@@ -296,6 +296,11 @@ const translations = {
     en: "Smart queue management mobile app for Uzbekistan. Customer and admin roles, real-time queue status, powered by a Supabase backend.",
     ru: "Мобильное приложение для умного управления очередями в Узбекистане. Роли клиента и администратора, статус очереди в реальном времени на базе Supabase.",
   },
+  proj_desc_8: {
+    uz: "IT Park o'quv markazi uchun CRM tizimi. Guruhlar, davomat, to'lovlar va sertifikatlar, Supabase backend bilan ishlaydi.",
+    en: "CRM system for the IT Park learning center. Groups, attendance, payments and certificates, powered by a Supabase backend.",
+    ru: "CRM-система для учебного центра IT Park. Группы, посещаемость, оплаты и сертификаты на базе Supabase.",
+  },
 
   certs_tag: {
     uz: "// certificates",
