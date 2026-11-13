@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jo'rabek Abdullayev — CV (UZ)</title>
+    <link rel="icon" href="../favicon.ico" sizes="48x48" />
+    <link rel="icon" type="image/png" sizes="192x192" href="../assets/favicon-192.png" />
+    <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
     <style>
       :root {
         --paper: #ffffff;
@@ -231,7 +234,7 @@
         color: #475569;
         line-height: 1.6;
       }
-      @media (max-width: 900px) {
+      @media screen and (max-width: 900px) {
         .sheet {
           width: 100%;
           height: auto;
@@ -240,18 +243,135 @@
           grid-template-columns: 1fr;
         }
       }
+      @page {
+        size: A4;
+        margin: 0;
+      }
       @media print {
+        html,
+        body,
+        * {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+        html,
         body {
+          width: 210mm;
+          height: 297mm;
+          margin: 0;
+          padding: 0;
           background: #fff;
         }
         .page-wrap {
+          display: block;
+          min-height: 0;
           padding: 0;
         }
         .toolbar {
           display: none;
         }
         .sheet {
+          width: 210mm;
+          height: 297mm;
+          margin: 0;
+          overflow: hidden;
           box-shadow: none;
+          break-inside: avoid;
+          page-break-inside: avoid;
+        }
+        .grid {
+          grid-template-columns: 74mm minmax(0, 1fr);
+          height: 100%;
+          min-height: 0;
+        }
+        .left,
+        .right {
+          min-width: 0;
+          break-inside: avoid;
+          page-break-inside: avoid;
+        }
+        .left {
+          padding: 10mm 6mm;
+          background: var(--left);
+          color: #fff;
+        }
+        .right {
+          padding: 10mm 8mm;
+          background: var(--paper);
+        }
+        .name {
+          font-size: 26px;
+          margin-bottom: 8px;
+        }
+        .role {
+          font-size: 12px;
+          margin-bottom: 20px;
+        }
+        .section-h {
+          margin-bottom: 8px;
+        }
+        .section-h,
+        .lang-sub {
+          color: #cbd5e1;
+        }
+        .contact,
+        .chips {
+          gap: 6px;
+          margin-bottom: 18px;
+        }
+        .row {
+          gap: 8px;
+          font-size: 11px;
+          line-height: 1.4;
+        }
+        .contact a {
+          min-width: 0;
+          overflow-wrap: anywhere;
+        }
+        .chip {
+          font-size: 10px;
+          padding: 4px 7px;
+        }
+        .langs {
+          gap: 8px;
+        }
+        .r-h {
+          margin-bottom: 8px;
+          padding-bottom: 8px;
+        }
+        .r-h,
+        .date {
+          color: var(--muted);
+        }
+        .p,
+        .bullets li {
+          font-size: 12px;
+          line-height: 1.5;
+        }
+        .block {
+          margin-bottom: 16px;
+          break-inside: avoid;
+          page-break-inside: avoid;
+        }
+        .split {
+          gap: 8px;
+          margin-bottom: 6px;
+        }
+        .title {
+          font-size: 13px;
+        }
+        .date {
+          font-size: 10px;
+        }
+        .bullets {
+          gap: 4px;
+        }
+        .projects {
+          gap: 10px 16px;
+        }
+        .proj p {
+          font-size: 11px;
+          line-height: 1.5;
         }
       }
     </style>

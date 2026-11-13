@@ -588,8 +588,12 @@ body.light-mode {
 /* PROJECTS */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   gap: 24px;
+}
+/* Arxivlangan loyihalar. Qaytarish: index.html dagi kartadan data-archived atributini olib tashlang. */
+.project-card[data-archived] {
+  display: none !important;
 }
 .project-card {
   background: rgba(255, 255, 255, 0.07);
