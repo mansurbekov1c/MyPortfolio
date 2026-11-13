@@ -591,8 +591,9 @@ body.light-mode {
   grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   gap: 24px;
 }
-/* Arxivlangan loyihalar. Qaytarish: index.html dagi kartadan data-archived atributini olib tashlang. */
-.project-card[data-archived] {
+/* Arxivlangan loyihalar va sertifikatlar. Qaytarish: index.html dagi kartadan data-archived atributini olib tashlang. */
+.project-card[data-archived],
+.cert-card[data-archived] {
   display: none !important;
 }
 .project-card {

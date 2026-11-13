@@ -5,6 +5,8 @@ Build/test yo'q. Lokal ko'rish: `python -m http.server 8765` (repo ildizida).
 
 ## Qarorlar va sabablari
 
+- Sertifikatlar (2026-11-13): 5 tasi ko'rinadi — Hackathon, UX Design Spec, IT Support Spec, Wireframes, Networking (frontendga eng mos va bir-birini takrorlamaydigan). Qolgan 7 tasi `data-archived`.
+
 - **Arxivlangan loyihalar (2026-11-13):** first-project, boldo, monito, blog-title,
   designer, liquid-glass kartalari HTML'dan o'chirilmagan — `data-archived` atributi
   bilan yashirilgan (`style.css`: `.project-card[data-archived]{display:none}`).
@@ -22,10 +24,8 @@ Build/test yo'q. Lokal ko'rish: `python -m http.server 8765` (repo ildizida).
   Har o'zgarishdan keyin 3 tilda ham 1 bet ekanini tekshirish (headless Edge
   `--print-to-pdf`, betlar soni).
 - **Sertifikatlar:** eng yangisi grid boshida. Rasm 420×324 PNG, `assets/certs/`.
-  About'dagi sertifikat soni (`stat-num`) qo'lda yangilanadi (hozir 12).
+  About'dagi sertifikat soni (`stat-num`) qo'lda yangilanadi (hozir 5).
 
 ## Ochiq savollar
 
-- Sertifikatlar 12 ta — foydalanuvchi qisqartirmoqchi. Claude tavsiyasi: Hackathon +
-  Google UX Design Specialization + Google IT Support Specialization (kurslar
-  specialization ichida). Qaror kutilmoqda; yashirish `data-archived` usulida.
+- Hozircha yo'q.
