@@ -10,7 +10,8 @@ Build/test yo'q. Lokal ko'rish: `python -m http.server 8765` (repo ildizida).
   bilan yashirilgan (`style.css`: `.project-card[data-archived]{display:none}`).
   Qaytarish: kartadan `data-archived` ni olib tashlash. Foydalanuvchi "aytganimda
   darhol qaytarilsin" degan. Ko'rinadiganlari: Navbat (smart-queue), IT Park CRM.
-  About'dagi "5+ Projects" raqami o'zgartirilmagan.
+  About'dagi "5+ Projects" raqami o'zgartirilmagan. CV "Tanlangan loyihalar" ham
+  Navbat + IT Park CRM ga almashtirilgan (2026-11-13).
 - **Favicon:** eski `favicon.png` shaffof fonda oq `</>` edi — Google natijasida oq
   doira bo'lib ko'rinmagan. Endi qora yumaloq kvadrat fonda; `favicon.ico` (ildizda,
   16/32/48), `assets/favicon-192.png` (Google 48 ga karrali o'lcham istaydi),
@@ -25,5 +26,6 @@ Build/test yo'q. Lokal ko'rish: `python -m http.server 8765` (repo ildizida).
 
 ## Ochiq savollar
 
-- CV'dagi "Tanlangan loyihalar" hali Boldo/Monito/Liquid Glass ni ko'rsatadi
-  (saytda arxivlangan). Navbat/IT Park CRM bilan almashtirish — foydalanuvchi qarori.
+- Sertifikatlar 12 ta — foydalanuvchi qisqartirmoqchi. Claude tavsiyasi: Hackathon +
+  Google UX Design Specialization + Google IT Support Specialization (kurslar
+  specialization ichida). Qaror kutilmoqda; yashirish `data-archived` usulida.
