@@ -11,7 +11,9 @@ Build/test yo'q. Lokal ko'rish: `python -m http.server 8765` (repo ildizida).
   designer, liquid-glass kartalari HTML'dan o'chirilmagan — `data-archived` atributi
   bilan yashirilgan (`style.css`: `.project-card[data-archived]{display:none}`).
   Qaytarish: kartadan `data-archived` ni olib tashlash. Foydalanuvchi "aytganimda
-  darhol qaytarilsin" degan. Ko'rinadiganlari: Navbat (smart-queue), IT Park CRM.
+  darhol qaytarilsin" degan. Ko'rinadiganlari: Navbat (smart-queue), IT Park CRM,
+  Soatbay (repo `Ijara_Xonadon`, ijara-xonadon.vercel.app, `proj_desc_9`, 2026-11-21).
+  Karta rasmi — jonli saytning 1440×900 birinchi ekrani (headless Edge `--screenshot`).
   About'dagi "5+ Projects" raqami o'zgartirilmagan. CV "Tanlangan loyihalar" ham
   Navbat + IT Park CRM ga almashtirilgan (2026-11-13).
 - **Favicon:** eski `favicon.png` shaffof fonda oq `</>` edi — Google natijasida oq

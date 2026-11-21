@@ -301,6 +301,11 @@ const translations = {
     en: "CRM system for the IT Park learning center. Groups, attendance, payments and certificates, powered by a Supabase backend.",
     ru: "CRM-система для учебного центра IT Park. Группы, посещаемость, оплаты и сертификаты на базе Supabase.",
   },
+  proj_desc_9: {
+    uz: "Dars va uchrashuvlar uchun xonalarni soatbay ijaraga olish. Narx jonli hisoblanadi, band qilish so'rovi va admin paneli, Appwrite backend bilan ishlaydi.",
+    en: "Hourly room rental for lessons and meetings. Live price calculation, booking requests and an admin panel, powered by an Appwrite backend.",
+    ru: "Почасовая аренда комнат для занятий и встреч. Расчёт цены в реальном времени, заявки на бронь и админ-панель на базе Appwrite.",
+  },
 
   certs_tag: {
     uz: "// certificates",
